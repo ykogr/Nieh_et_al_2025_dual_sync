@@ -1,0 +1,186 @@
+---
+title: "04_Micro_Analysis_LMM"
+output: html_notebook
+---
+
+# library
+- For the first time, installation is required. Please install it using install.packages("lmerTest").
+
+```{r}
+library(tidyverse)
+library(lme4)
+library(lmerTest)
+```
+
+# Data loading
+```{r}
+# Get a list of files in the directory
+files <- list.files("Micro_Analysis_LMM", 
+                    pattern = "^\\d+\\.\\d+_chew_sync_summary_(visible|invisible)_pair_Human\\.csv$", 
+                    full.names = TRUE)
+
+# Read each file and add delta/condition
+d_list <- map(files, function(file) {
+  # Extract delta and condition from the file name
+  fname <- basename(file)
+  delta <- str_extract(fname, "^\\d+\\.\\d+")
+  condition <- str_extract(fname, "(visible|invisible)_pair_Human")
+  condition <- str_remove(condition, "_Human")
+  
+  # Data loading
+  df <- read_csv(file, show_col_types = FALSE)
+  df$delta <- as.numeric(delta)
+  df$condition <- condition
+  
+  return(df)
+})
+
+# combine
+d_summary_20251005 <- bind_rows(d_list)
+
+d_summary_20251005 <- d_summary_20251005 %>%
+  mutate(
+    session = str_extract(pair_id, "\\d{2}$"),
+    pair_id = str_replace(pair_id, "_\\d{2}$", "")
+  ) %>% 
+    mutate(session=as.integer(session))
+
+d_summary_20251005
+```
+
+# Statistics
+
+## delta=0.1
+### zs
+```{r}
+d_summary_20251005 %>%   
+filter(delta == 0.1) %>%   
+lmer(z_S ~ condition + (1 | pair_id), data = .) %>%   
+summary()
+```
+
+### STR
+```{r}
+d_summary_20251005 %>%   
+filter(delta == 0.1) %>%   
+lmer(STR ~ condition + (1 | pair_id), data = .) %>%   
+summary()
+```
+
+### Max_episode
+```{r}
+d_summary_20251005 %>%   
+filter(delta == 0.1) %>%   
+lmer(Max_episode ~ condition + (1 | pair_id), data = .) %>%   
+summary()
+```
+
+## delta=0.2
+### zs
+```{r}
+d_summary_20251005 %>%   
+filter(delta == 0.2) %>%   
+lmer(z_S ~ condition + (1 | pair_id), data = .) %>%   
+summary()
+```
+
+### STR
+```{r}
+d_summary_20251005 %>%   
+filter(delta == 0.2) %>%   
+lmer(STR ~ condition + (1 | pair_id), data = .) %>%   
+summary()
+```
+
+### Max_episode
+```{r}
+d_summary_20251005 %>%   
+filter(delta == 0.2) %>%   
+lmer(Max_episode ~ condition + (1 | pair_id), data = .) %>%   
+summary()
+```
+
+## delta=0.3
+### zs
+```{r}
+d_summary_20251005 %>%   
+filter(delta == 0.3) %>%   
+lmer(z_S ~ condition + (1 | pair_id), data = .) %>%   
+summary()
+```
+
+### STR
+```{r}
+d_summary_20251005 %>%   
+filter(delta == 0.3) %>%   
+lmer(STR ~ condition + (1 | pair_id), data = .) %>%   
+summary()
+```
+
+### Max_episode
+```{r}
+d_summary_20251005 %>%   
+filter(delta == 0.3) %>%   
+lmer(Max_episode ~ condition + (1 | pair_id), data = .) %>%   
+summary()
+```
+
+
+## delta=0.5
+### zs
+```{r}
+d_summary_20251005 %>%   
+filter(delta == 0.5) %>%   
+lmer(z_S ~ condition + (1 | pair_id), data = .) %>%   
+summary()
+```
+
+### STR
+```{r}
+d_summary_20251005 %>%   
+filter(delta == 0.5) %>%   
+lmer(STR ~ condition + (1 | pair_id), data = .) %>%   
+summary()
+```
+
+### Max_episode
+```{r}
+d_summary_20251005 %>%   
+filter(delta == 0.5) %>%   
+lmer(Max_episode ~ condition + (1 | pair_id), data = .) %>%   
+summary()
+```
+
+## delta=1.0
+### zs
+```{r}
+d_summary_20251005 %>%   
+filter(delta == 1.0) %>%   
+lmer(z_S ~ condition + (1 | pair_id), data = .) %>%   
+summary()
+```
+
+### STR
+```{r}
+d_summary_20251005 %>%   
+filter(delta == 1.0) %>%   
+lmer(STR ~ condition + (1 | pair_id), data = .) %>%   
+summary()
+```
+
+### Max_episode
+```{r}
+d_summary_20251005 %>%   
+filter(delta == 1.0) %>%   
+lmer(Max_episode ~ condition + (1 | pair_id), data = .) %>%   
+summary()
+```
+
+# sessionInfo
+```{r}
+sessionInfo()
+```
+
+
+
+
