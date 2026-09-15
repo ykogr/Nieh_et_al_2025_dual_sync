@@ -6,7 +6,7 @@
 # R2_6_3_5/r26_condiff_kit/ (unzipped as is).  ANALYSIS_DIR (= the R2_6_3_5 folder) is found automatically:
 # the first of <this folder>, <parent folder> that contains sensitivity_out/.  Override with ANALYSIS_DIR=.
 # All default paths below are relative to ANALYSIS_DIR, so the outputs land in R2_6_3_5/sensitivity_out and
-# R2_6_3_5/xscale_out in both layouts (this is where letter_v4_kit / manuscript_kit look for them).
+# R2_6_3_5/xscale_out in both layouts (the reported values are read from these locations).
 #
 #   STAGE=condiff  bash run_R2_6_condiff.sh   # 06: condition difference posterior (R2-6 / R3-5)
 #   STAGE=rhat     bash run_R2_6_condiff.sh   # 07: observed max R-hat of the main (raw) fits  (co-author item 10)

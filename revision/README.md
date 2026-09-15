@@ -28,8 +28,6 @@ Japanese) is kept verbatim; an English translation is provided next to it (`*_en
 ## Not included
 
 - Stan fit objects (`stan_fits*/`) and other files above GitHub's 100 MB limit.
-- The manuscript, the response letter and the tooling that generates or audits them (`manuscript_kit/`, `letter_v4_kit/`).
-  This folder contains only the analysis scripts, corrected data and run logs.
 - Working copies and superseded outputs (`pre_*backup*/`, `upload_*/`, `old/`).
 
 `TREE.txt` is the complete file tree of this folder.

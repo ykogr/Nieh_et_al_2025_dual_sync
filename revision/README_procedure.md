@@ -207,8 +207,7 @@ STAGE=table1_ci bash run_gridnull_main_trialfix.sh
   produces Wald-type 95% intervals (estimate ± t(0.975, df_KR) × SE_KR) using the Kenward-Roger degrees of freedom and standard error.
   Because these are based on the same quantities as the t and p columns of Table 1 (Kenward-Roger), the intervals and p values in the table cannot contradict each other.
   Profile-likelihood intervals are also listed for reference (may be NA in cells where a variance component is 0).
-- Output: `df_verification_out/table1_ci.csv`, `table1_ci.txt`. The manuscript kit (manuscript_kit) uses this csv for the CI column of Table 1
-  if it exists under `LOGS_ROOT`; otherwise it inserts the derived value "estimate ± 2.101 × SE" (DERIVED).
+- Output: `df_verification_out/table1_ci.csv`, `table1_ci.txt`. The CI column of Table 1 is taken from this csv.
 - Also run automatically at the end of `STAGE=all` (in environments with R).
 
 **Verify the Stan output only (v4.2)**  Note: a few seconds
@@ -267,8 +266,7 @@ STAGE=icc_ci bash run_R2_4_trialfix.sh        # v4.3: recomputes nothing; only w
     `PER_VIDEO_DIR=path STAGE=icc_ci bash run_R2_4_trialfix.sh`. If it truly exists nowhere, rebuild the zS reproduction with `STAGE=reliability`
     (summary.txt is then regenerated as well, so check in the audit that the ICC point estimates in the letter still agree).
   - Output: `R2-4_zS_icc_ci.txt` (a table of mode × δ × period, and for the letter one line each with "the range of the lower and upper limits of the P1–P3 intervals"), `R2-4_zS_icc_ci.csv`.
-  - Upload: `R2-4_zS_icc_ci.txt` (the 2 placeholders 〔ICC 95% CI: to be filled from R2-4_zS_icc_ci.txt〕 in the letter and
-    the 2 PENDING items of audit_letter_numbers_v2.py are filled from this file).
+  - Upload: `R2-4_zS_icc_ci.txt` (the ICC 95% CI values reported for R2-4 are taken from this file).
 - Changes in v4.2 (the kick calls `../00_trialfix/01_patch_scripts.py .` at the start to apply them automatically; safe to repeat):
   - The null distribution of the zS reproduction (R2-4_zS_reproduction.py) is changed to the **grid-aligned shift** used in the General note of the letter (`--null grid`,
     shifts by integer multiples of 0.1 s only; the same design as R2-4_zS_nullcheck.py). The old continuous uniform shift remains available

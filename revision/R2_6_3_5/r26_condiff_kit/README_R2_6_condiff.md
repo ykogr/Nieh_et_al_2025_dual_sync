@@ -8,7 +8,7 @@ Either of the following locations is fine (v2.1).
 `run_R2_6_condiff.sh` looks for `sensitivity_out/` first in its own folder and then in the parent folder to determine the location of R2_6_3_5 (`ANALYSIS_DIR`),
 and prints `ANALYSIS_DIR (R2_6_3_5) = …` on the first line. The defaults of `FIT_DIR`, `MICRO_DIR`, `XSCALE_OUT` and `DATA_DIR` are all
 relative to `ANALYSIS_DIR`, so with either (A) or (B) the outputs go to `R2_6_3_5/sensitivity_out/rhat_raw.*` and `R2_6_3_5/xscale_out/`
-(letter_v4_kit and manuscript_kit read these locations). If `sensitivity_out/` exists in neither place, the script stops and asks for `ANALYSIS_DIR=<R2_6_3_5>`.
+(the reported values are read from these locations). If `sensitivity_out/` exists in neither place, the script stops and asks for `ANALYSIS_DIR=<R2_6_3_5>`.
 
 v2.1 → v2.2 (07_rhat_main.R only): because `fit$summary()` was applied to all variables, R̂ was also computed for the generated quantities `y_full_out`, `y_rep` and `log_lik`
 (each of length N = number of windows, 3N variables in total), which took tens of minutes. v2.2 summarises only the variables obtained from `fit$metadata()$stan_variables`
@@ -45,7 +45,7 @@ Collects R̂ of all parameters from the main-analysis fit and writes it to `sens
 
 - "max R-hat, all sampled parameters" = maximum over all variables of the parameters block (including y_mis = imputed values of missing data) + beta_state + lp__ (v2.2: generated quantities excluded). The measured value to accompany the manuscript statement "all parameters showing R̂ < 1.1"
 - "model parameters" = maximum excluding y_mis and lp__. "beta_state" = maximum over the 13 values of β(t) only.
-- At the end it prints draft wording for the manuscript STAR Methods (3 decimal places). Flow of the value: letter_v4_kit (logs_v46.py) reads `R2_6_3_5/sensitivity_out/rhat_raw_summary.csv` to generate letter paragraph 715, and manuscript_kit builds E61 (the parenthetical in the MCMC paragraph) from that paragraph 715. Nothing is transcribed by hand.
+- At the end it prints draft wording for the manuscript STAR Methods (3 decimal places). Flow of the value: the R-hat statement in the STAR Methods (MCMC paragraph) is taken from `R2_6_3_5/sensitivity_out/rhat_raw_summary.csv`. Nothing is transcribed by hand.
 - R̂ for the micro side (β(t) of Figure 4e) is already given as "max Rhat over beta_state" in `gridnull_main/beta_intervals_seconds_d0.1.txt`, so no additional run is needed.
 
 ## STAGE=xscale (08_xscale_micro_macro.R)
