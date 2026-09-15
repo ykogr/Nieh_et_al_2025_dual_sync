@@ -1,0 +1,33 @@
+(1) code check
+  OK  ../R1_2/02_Micro_Analysis_NLOPM_periods.py  loader:patched  match:patched  period_origin:patched
+  OK  ../R1_2/02_Micro_Analysis_NLOPM_periods_gridnull.py  loader:patched  match:patched  period_origin:patched
+  OK  ../R1_2/03_pseudo_pairs.py  period_origin:patched
+  OK  ../R1_2/03_pseudo_pairs_gridnull.py  period_origin:patched
+  OK  ../R2_2_2_5_2_10_3_2_3_3/01_null_symmetry_check.py  loader:patched  match:patched  period_origin:patched
+  OK  ../R2_2_2_5_2_10_3_2_3_3/01_null_symmetry_check_gridnull.py  loader:patched  match:patched  period_origin:patched
+  OK  ../R2_2_2_5_2_10_3_2_3_3/02_jitter_surrogates.py  loader:patched  match:patched  period_origin:patched
+  OK  ../R2_2_2_5_2_10_3_2_3_3/02_jitter_surrogates_gridnull.py  loader:patched  match:patched  period_origin:patched
+  OK  ../R2_2_2_5_2_10_3_2_3_3/03_reactive_shift_test.py  loader:patched  match:patched  period_origin:patched
+  OK  ../R2_2_2_5_2_10_3_2_3_3/03_reactive_shift_test_gridnull.py  loader:patched  match:patched  period_origin:patched
+  OK  ../R2_4_3_1/03_Micro_Analysis_NOLPM_gridnull.py  loader:patched  match:patched  time_axis:patched
+  OK  ../R2_4_3_1/R2-4_jitter_simulation.py  match:patched
+  OK  ../R2_4_3_1/R2-4_zS_nullcheck.py  match:patched
+  OK  ../R2_4_3_1/R2-4_zS_reproduction.py  match:patched
+  OK  ../gridnull_main/03_Micro_Analysis_NOLPM_gridnull_v2.py  loader:patched  match:patched  time_axis:patched
+  OK  ../gridnull_main/_03_Micro_Analysis_NOLPM_gridnull.py  loader:patched  match:patched  time_axis:patched
+(2) data check
+  raw csv files: 177   chewonly csv files: 177
+  chewonly files still containing Trial/Unnamed columns: 0
+  chew times in unnamed (overflow) columns of raw data: 22  -> kept in chewonly copy as extra Chew_k columns
+  total numeric cells in chewonly copy: 37222
+(3) numeric check (delta = 0.1)
+  imported ../gridnull_main/03_Micro_Analysis_NOLPM_gridnull_v2.py
+  pairs checked: 60
+  spurious (Trial/Unnamed) events removed, pair files only (A+B, whole file): 1909   [the total in chewonly_report.txt also includes the solo files]
+  events inside the overlap window, legacy -> fixed: 28383 -> 26322 (difference = spurious events + real chews lost because the overlap now starts later)
+  overlap start: legacy always 1-1 s; fixed 3.2-19.5 s (mean 6.2)
+  matched events, all pairs: legacy 4560 -> chew-only w/o tolerance 3671 -> chew-only + FLOAT_TOL 5132
+  pairs whose match count changes with FLOAT_TOL alone: 60 / 60
+  patched script reproduces this verification implementation on all pairs: True
+
+RESULT: ALL OK

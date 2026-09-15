@@ -1,0 +1,20 @@
+=====================================================================
+beta_state(t) 95% credible intervals excluding zero, in video seconds
+=====================================================================
+summary : stan_fits/summary_z_S_t_delta1_human.csv
+bins    : 171  (bin 1 -> t_center 6.5 s, bin 171 -> 176.5 s)
+mapping : bin i -> i-th distinct t_center of Micro_Analysis_Bayesian/vis_1.0.csv + Micro_Analysis_Bayesian/invis_1.0.csv (same as bin_id = as.integer(factor(t_center)) in 06_bayes_gridnull_fit.R)
+periods : P1:0-20,P2:20-60,P3:60-180   (bin assigned by its t_center)
+max Rhat over beta_state: 1.0015
+
+--- positive (q2.5 > 0; visible > invisible) ---
+  total: 12 bins = 12 s
+  per period: P1 0 s, P2 0 s, P3 12 s
+    bins  72- 83  t_center   77.5-  88.5 s  (edges   77.0-  89.0 s,  12 s, P3)
+
+--- negative (q97.5 < 0; invisible > visible) ---
+  total: 22 bins = 22 s
+  per period: P1 5 s, P2 17 s, P3 0 s
+    bins  10- 15  t_center   15.5-  20.5 s  (edges   15.0-  21.0 s,   6 s, P1->P2)
+    bins  21- 36  t_center   26.5-  41.5 s  (edges   26.0-  42.0 s,  16 s, P2)
+

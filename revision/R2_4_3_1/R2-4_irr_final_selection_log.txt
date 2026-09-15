@@ -1,0 +1,27 @@
+R2-4 IRR subset selection log
+=============================
+Manifest              : auto-built from ../annotation_raw_data
+Random seed           : 20260825
+Candidates (after excl.): 114 ({'visible': 27, 'invisible': 30, 'solo': 57})
+Excluded videos       : 3 (['20170710_07_08_01', '20170710_07_08_02', '20170710_07_08_03'])
+Requested allocation  : {'visible': 5, 'invisible': 5, 'solo': 5}
+Condition cycle order : ['solo', 'visible', 'invisible']
+Selected (annotation order):
+   1. 20170710_11_02  [solo]
+   2. 20170706_05_06_03  [visible]
+   3. 20170707_01_02_03  [invisible]
+   4. 20170725_07_01  [solo]
+   5. 20170706_03_04_03  [visible]
+   6. 20170705_03_04_01  [invisible]
+   7. 20170724_04_03  [solo]
+   8. 20170706_01_02_03  [visible]
+   9. 20170707_03_04_02  [invisible]
+  10. 20170725_05_01  [solo]
+  11. 20170714_07_08_02  [visible]
+  12. 20170707_11_12_01  [invisible]
+  13. 20170725_07_03  [solo]
+  14. 20170714_03_04_03  [visible]
+  15. 20170707_01_02_01  [invisible]
+
+STAR Methods reporting sentence (fill in as appropriate):
+  'A stratified pseudo-random subset of videos (5 visible, 5 invisible, 5 solo) was selected from all session videos using a fixed random seed (20260825); videos were annotated in a condition-interleaved order so that an early stop would preserve a stratified random sample.'

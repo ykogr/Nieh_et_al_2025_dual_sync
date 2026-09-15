@@ -1,0 +1,7 @@
+legacy header normalisation  src=/Users/ogura/Dropbox/Documents/Drafts/Jyou_et_al_2025/iScience/iScience_Revision/iscience_revision_analysis/annotation_raw_data  dry_run=False
+[FIX] solo_Human/20170706_07_03_B.csv
+      old header: 回數,1噛み目,2噛み目,3噛み目,4噛み目,5噛み目,6噛み目,7噛み目,8噛み目,9噛み目,10噛み目,11噛み目,12噛み目,13噛み目,14噛み目,15噛み目,16噛み目,17噛み目,18噛み目,19噛み目,20噛み目,21噛み目,22噛み目,23噛み目,24噛み目,25噛み目,26噛み目,27噛み目,28噛み目,29噛み目,30噛み目,31噛み目
+      new header: Trial,Chew_1,Chew_2,Chew_3,Chew_4,Chew_5,Chew_6,Chew_7,Chew_8,Chew_9,Chew_10,Chew_11,Chew_12,Chew_13,Chew_14,Chew_15,Chew_16,Chew_17,Chew_18,Chew_19,Chew_20,Chew_21,Chew_22,Chew_23,Chew_24,Chew_25,Chew_26,Chew_27,Chew_28,Chew_29,Chew_30,Chew_31
+      data rows : 11 lines, md5 0181bdc8f27525230a70295c7ff31ae0 (unchanged)
+      original saved to 00_trialfix/legacy_header_backup/solo_Human/20170706_07_03_B.csv
+files with legacy headers: 1

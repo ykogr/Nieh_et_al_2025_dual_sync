@@ -1,0 +1,131 @@
+=====================================================
+R1-2 period-resolved Delta-t analysis: 2026-09-08 16:23:21 
+Sign convention: dt = t_A - t_B > 0 means A lags behind B
+=====================================================
+
+--- pair-level summary (means across pairs) ---
+  delta condition period n_pairs mean_n_matches mean_median_dt
+1   0.1 invisible     P1      28           9.75      -3.37e-17
+2   0.1 invisible     P2      30          22.53      -1.67e-03
+3   0.1 invisible     P3      30          58.40       0.00e+00
+4   0.1   visible     P1      29           7.83      -1.90e-02
+5   0.1   visible     P2      30          20.03       3.33e-03
+6   0.1   visible     P3      30          53.53       0.00e+00
+  mean_median_abs_dt mean_prop_pos mean_prop_band
+1             0.0786         0.339              0
+2             0.0967         0.338              0
+3             0.1000         0.330              0
+4             0.0828         0.282              0
+5             0.0900         0.344              0
+6             0.0967         0.332              0
+
+Note: pair x period cells with fewer than 5 matches are excluded from tests below.
+
+=====================================================
+delta = 0.1
+=====================================================
+
+--- LMM: median_abs_dt ~ condition * period + (1|dyad_id) ---
+Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+lmerModLmerTest]
+Formula: median_abs_dt ~ condition * period + (1 | dyad_id)
+   Data: pd
+
+REML criterion at convergence: -740.9
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-3.9079  0.0221  0.1630  0.5006  1.0035 
+
+Random effects:
+ Groups   Name        Variance  Std.Dev.
+ dyad_id  (Intercept) 2.481e-05 0.004981
+ Residual             5.145e-04 0.022684
+Number of obs: 168, groups:  dyad_id, 20
+
+Fixed effects:
+                            Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)                 0.083109   0.004912  91.804173  16.921  < 2e-16 ***
+conditionvisible            0.002150   0.006941  92.702715   0.310  0.75746    
+periodP2                    0.013558   0.006228 147.104519   2.177  0.03110 *  
+periodP3                    0.016891   0.006228 147.104519   2.712  0.00749 ** 
+conditionvisible:periodP2  -0.008817   0.008805 146.495694  -1.001  0.31830    
+conditionvisible:periodP3  -0.005483   0.008805 146.495694  -0.623  0.53440    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) cndtnv perdP2 perdP3 cnd:P2
+conditnvsbl -0.708                            
+periodP2    -0.707  0.501                     
+periodP3    -0.707  0.501  0.558              
+cndtnvsb:P2  0.500 -0.707 -0.707 -0.395       
+cndtnvsb:P3  0.500 -0.707 -0.395 -0.707  0.558
+Type III Analysis of Variance Table with Satterthwaite's method
+                    Sum Sq    Mean Sq NumDF   DenDF F value   Pr(>F)   
+condition        0.0002026 0.00020262     1  17.302  0.3938 0.538514   
+period           0.0053764 0.00268822     2 145.284  5.2245 0.006441 **
+condition:period 0.0005190 0.00025952     2 145.284  0.5044 0.604935   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+condition contrast within period (Holm):
+period = P1:
+ contrast            estimate      SE   df lower.CL upper.CL t.ratio p.value
+ invisible - visible -0.00215 0.00696 94.7 -0.01596   0.0117  -0.309  0.7579
+
+period = P2:
+ contrast            estimate      SE   df lower.CL upper.CL t.ratio p.value
+ invisible - visible  0.00667 0.00627 77.5 -0.00581   0.0191   1.064  0.2907
+
+period = P3:
+ contrast            estimate      SE   df lower.CL upper.CL t.ratio p.value
+ invisible - visible  0.00333 0.00627 77.5 -0.00914   0.0158   0.532  0.5963
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+
+period contrast within condition (Holm):
+condition = invisible:
+ contrast estimate      SE  df lower.CL upper.CL t.ratio p.value
+ P1 - P2  -0.01356 0.00624 148  -0.0287  0.00155  -2.173  0.0627
+ P1 - P3  -0.01689 0.00624 148  -0.0320 -0.00179  -2.708  0.0227
+ P2 - P3  -0.00333 0.00586 144  -0.0175  0.01085  -0.569  0.5702
+
+condition = visible:
+ contrast estimate      SE  df lower.CL upper.CL t.ratio p.value
+ P1 - P2  -0.00474 0.00623 147  -0.0198  0.01035  -0.761  0.5138
+ P1 - P3  -0.01141 0.00623 147  -0.0265  0.00368  -1.831  0.2073
+ P2 - P3  -0.00667 0.00586 144  -0.0209  0.00752  -1.138  0.5138
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+Conf-level adjustment: bonferroni method for 3 estimates 
+P value adjustment: holm method for 3 tests 
+
+--- Wilcoxon signed-rank: pair-level median dt vs 0 (Holm per delta) ---
+  condition period  n mean_median_dt     p p_holm
+1 invisible     P1 24        0.00625 0.727  1.000
+2 invisible     P2 30       -0.00167 1.000  1.000
+3 invisible     P3 30        0.00000    NA     NA
+4   visible     P1 24       -0.01667 0.160  0.641
+5   visible     P2 30        0.00333 0.438  1.000
+6   visible     P3 30        0.00000    NA     NA
+
+--- t-test: pair-level prop(dt>0) vs 0.5 (Holm per delta) ---
+  condition period  n mean_prop_pos        p   p_holm
+1 invisible     P1 24         0.372 6.66e-04 6.66e-04
+2 invisible     P2 30         0.338 9.50e-10 3.80e-09
+3 invisible     P3 30         0.330 3.73e-14 2.24e-13
+4   visible     P1 24         0.306 1.23e-05 2.47e-05
+5   visible     P2 30         0.344 1.64e-08 4.92e-08
+6   visible     P3 30         0.332 8.75e-13 4.37e-12
+
+--- pairwise KS tests on pooled dt between periods, within condition (Holm; descriptive) ---
+  condition period_1 period_2  n1   n2     D        p   p_holm
+1 invisible       P1       P2 273  676 0.191 1.30e-06 1.30e-06
+2 invisible       P1       P3 273 1752 0.242 1.91e-12 3.81e-12
+3 invisible       P2       P3 676 1752 0.174 2.57e-13 7.70e-13
+4   visible       P1       P2 227  601 0.190 1.34e-05 1.34e-05
+5   visible       P1       P3 227 1606 0.265 1.55e-12 3.10e-12
+6   visible       P2       P3 601 1606 0.205 2.22e-16 6.66e-16

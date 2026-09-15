@@ -1,0 +1,63 @@
+=====================================================
+R2-4 coder-robustness of the period-resolved zS
+=====================================================
+
+MODE: inter-rater  (coder 'second' = independent second coder tree 'IRR_final')
+Pair videos           : 10
+delta (tolerance)     : 0.1 s
+Permutations per cell : 10000
+Null shift            : grid (offsets = k * 0.1 s, grid-aligned)
+Periods               : P1:0-20,P2:20-60,P3:60-180
+
+--- P1 ---
+  ICC(A,1) original vs second coder = 0.071   Pearson r = 0.079
+  visible   (n = 5): mean zS original = 0.17, second = -0.11
+  invisible (n = 5): mean zS original = 0.50, second = 0.27
+  visible - invisible difference: original = -0.32, second coder = -0.38
+    20170705_03_04_01      invisible original =   2.64   second =   0.34
+    20170706_01_02_03      visible   original =  -2.00   second =   0.42
+    20170706_03_04_03      visible   original =   1.44   second =   0.53
+    20170706_05_06_03      visible   original =  -1.14   second =  -1.04
+    20170707_01_02_01      invisible original =   1.73   second =  -0.83
+    20170707_01_02_03      invisible original =  -0.87   second =   0.19
+    20170707_03_04_02      invisible original =  -0.98   second =  -0.10
+    20170707_11_12_01      invisible original =  -0.05   second =   1.74
+    20170714_03_04_03      visible   original =   2.19   second =   0.55
+    20170714_07_08_02      visible   original =   0.38   second =  -1.01
+
+--- P2 ---
+  ICC(A,1) original vs second coder = -0.225   Pearson r = -0.240
+  visible   (n = 5): mean zS original = 0.24, second = -0.00
+  invisible (n = 5): mean zS original = -0.62, second = -0.12
+  visible - invisible difference: original = +0.86, second coder = +0.12
+    20170705_03_04_01      invisible original =   0.15   second =  -2.94
+    20170706_01_02_03      visible   original =   0.97   second =   0.16
+    20170706_03_04_03      visible   original =  -0.54   second =  -0.48
+    20170706_05_06_03      visible   original =   0.54   second =   0.98
+    20170707_01_02_01      invisible original =  -1.11   second =  -0.19
+    20170707_01_02_03      invisible original =  -1.45   second =   1.36
+    20170707_03_04_02      invisible original =  -0.33   second =   1.17
+    20170707_11_12_01      invisible original =  -0.39   second =  -0.03
+    20170714_03_04_03      visible   original =   0.23   second =  -1.67
+    20170714_07_08_02      visible   original =  -0.01   second =   1.00
+
+--- P3 ---
+  ICC(A,1) original vs second coder = -0.733   Pearson r = -0.931
+  visible   (n = 5): mean zS original = 0.48, second = 0.55
+  invisible (n = 5): mean zS original = -0.74, second = 1.40
+  visible - invisible difference: original = +1.21, second coder = -0.86
+    20170705_03_04_01      invisible original =   1.12   second =  -0.04
+    20170706_01_02_03      visible   original =  -0.25   second =   1.59
+    20170706_03_04_03      visible   original =   1.83   second =  -0.87
+    20170706_05_06_03      visible   original =   0.05   second =   1.31
+    20170707_01_02_01      invisible original =   0.08   second =   0.56
+    20170707_01_02_03      invisible original =  -0.92   second =   1.88
+    20170707_03_04_02      invisible original =  -2.11   second =   1.88
+    20170707_11_12_01      invisible original =  -1.86   second =   2.72
+    20170714_03_04_03      visible   original =   0.34   second =   0.29
+    20170714_07_08_02      visible   original =   0.42   second =   0.40
+
+Note: zS computed per STAR Methods (NLOPM matching,
+S = 2*n_match/(n_a+n_b), period-restricted circular-shift
+null); independent reimplementation for the reliability
+check, not the original analysis code.

@@ -1,0 +1,23 @@
+# ---- ローカル専用 (解析の再現に不要) ----
+_local_only/
+**/pre_trialfix_backup_*/
+**/pre_delta02_backup_*/
+**/upload_*/
+*.pre_trialfix.bak
+.DS_Store
+__pycache__/
+*.pyc
+.Rhistory
+.Rapp.history
+.RData
+# ---- v2 (2026-09-15) 追加 ----
+**/stan_fits*/
+**/stan_tmp*/
+**/old/
+**/*_old/
+*.docx
+*.xlsx
+*.zip
+*.rds
+*.RData
+**/figs_png/

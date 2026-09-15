@@ -1,0 +1,218 @@
+revision_export/  (2027 files, 0.06 GB)  built 2026-09-15 22:49
+  00_trialfix/  (12 files)
+    legacy_header_backup/  (1 files)
+    00_fix_legacy_header.py
+    00_make_chewonly_data.py
+    01_patch_scripts.py
+    02_verify_fix.py
+    KIT_VERSION
+    chewonly_report.csv
+    chewonly_report.txt
+    legacy_header_report.txt
+    run_00_trialfix.sh
+    verify_pairs.csv
+    verify_report.txt
+  Micro_Analysis_LMM/  (11 files)
+    0.1_chew_sync_summary_invisible_pair_Human.csv
+    0.1_chew_sync_summary_visible_pair_Human.csv
+    0.2_chew_sync_summary_invisible_pair_Human.csv
+    0.2_chew_sync_summary_visible_pair_Human.csv
+    0.3_chew_sync_summary_invisible_pair_Human.csv
+    0.3_chew_sync_summary_visible_pair_Human.csv
+    0.5_chew_sync_summary_invisible_pair_Human.csv
+    0.5_chew_sync_summary_visible_pair_Human.csv
+    1.0_chew_sync_summary_invisible_pair_Human.csv
+    1.0_chew_sync_summary_visible_pair_Human.csv
+    prevalence_table2.csv
+  R1_2/  (1032 files)
+    data_timeline/  (950 files)
+    dt_grid_out/  (4 files)
+    dt_grid_out_excl_dyad/  (4 files)
+    dt_grid_out_relorigin/  (4 files)
+    dyad_influence_grid/  (6 files)
+    lmm_grid_out/  (2 files)
+    lmm_grid_out_excl_dyad/  (2 files)
+    lmm_grid_out_minus5/  (2 files)
+    lmm_grid_out_plus5/  (2 files)
+    lmm_grid_out_relorigin/  (2 files)
+    out_periods_grid_invisible/  (4 files)
+    out_periods_grid_invisible_excl_dyad/  (2 files)
+    out_periods_grid_invisible_minus5/  (4 files)
+    out_periods_grid_invisible_plus5/  (4 files)
+    out_periods_grid_invisible_relorigin/  (4 files)
+    out_periods_grid_visible/  (4 files)
+    out_periods_grid_visible_excl_dyad/  (2 files)
+    out_periods_grid_visible_minus5/  (4 files)
+    out_periods_grid_visible_plus5/  (4 files)
+    out_periods_grid_visible_relorigin/  (4 files)
+    out_pseudo_grid_invisible/  (1 files)
+    out_pseudo_grid_invisible_excl_dyad/  (1 files)
+    out_pseudo_grid_invisible_relorigin/  (1 files)
+    out_pseudo_grid_visible/  (1 files)
+    out_pseudo_grid_visible_excl_dyad/  (1 files)
+    out_pseudo_grid_visible_relorigin/  (1 files)
+    pseudo_interaction_grid/  (2 files)
+    pseudo_interaction_grid_excl_dyad/  (2 files)
+    02_Micro_Analysis_NLOPM_periods_gridnull.py
+    03_pseudo_pairs_gridnull.py
+    04_LMM_condition_by_period_gridnull.R
+    05_dt_latency_by_period_gridnull.R
+    06_sensitivity_analyses_gridnull.sh
+    07_pseudo_interaction_gridnull.R
+    08_R1-2_p3_dyad_influence.R
+    run_R1_2_trialfix.sh
+  R2_2_2_5_2_10_3_2_3_3/  (37 files)
+    out_jitter/  (18 files)
+    out_shift/  (9 files)
+    out_symmetry/  (4 files)
+    01_null_symmetry_check_gridnull.py
+    02_jitter_surrogates_gridnull.py
+    02b_make_lmm_input.py
+    03_reactive_shift_test_gridnull.py
+    04_LMM_condition_by_period_gridnull.R
+    run_R2_2_trialfix.sh
+  R2_4_3_1/  (85 files)
+    IRR_final/  (25 files)
+    ICC_annotate_v2.py
+    R2-4_annotation_cheatsheet_final.txt
+    R2-4_annotation_cheatsheet_final_en.txt
+    R2-4_irr_agreement.py
+    R2-4_irr_final_manifest.csv
+    R2-4_irr_final_selection.csv
+    R2-4_irr_final_selection_log.txt
+    R2-4_irr_results_inter_events.csv
+    R2-4_irr_results_inter_pairs.csv
+    R2-4_irr_results_inter_per_video.csv
+    R2-4_irr_results_inter_per_video_offset_corrected.csv
+    R2-4_irr_results_inter_summary.csv
+    R2-4_irr_results_inter_summary.txt
+    R2-4_irr_results_inter_summary_offset_corrected.csv
+    R2-4_irr_results_intra_events.csv
+    R2-4_irr_results_intra_pairs.csv
+    R2-4_irr_results_intra_per_video.csv
+    R2-4_irr_results_intra_per_video_offset_corrected.csv
+    R2-4_irr_results_intra_summary.csv
+    R2-4_irr_results_intra_summary.txt
+    R2-4_irr_results_intra_summary_offset_corrected.csv
+    R2-4_irr_sample_selection.py
+    R2-4_jitter_sim_per_video.csv
+    R2-4_jitter_sim_summary.txt
+    R2-4_jitter_simulation.py
+    R2-4_nullcheck_lmm.R
+    R2-4_nullcheck_lmm_contrasts.csv
+    R2-4_nullcheck_lmm_summary.txt
+    R2-4_nullcheck_per_video.csv
+    R2-4_nullcheck_summary.txt
+    R2-4_zS_icc_ci.csv
+    R2-4_zS_icc_ci.py
+    R2-4_zS_icc_ci.txt
+    R2-4_zS_inter_d0.1_per_video.csv
+    R2-4_zS_inter_d0.1_summary.txt
+    R2-4_zS_inter_d0.2_per_video.csv
+    R2-4_zS_inter_d0.2_summary.txt
+    R2-4_zS_inter_d0.3_per_video.csv
+    R2-4_zS_inter_d0.3_summary.txt
+    R2-4_zS_inter_d0.5_per_video.csv
+    R2-4_zS_inter_d0.5_summary.txt
+    R2-4_zS_inter_d1.0_per_video.csv
+    R2-4_zS_inter_d1.0_summary.txt
+    R2-4_zS_intra_d0.1_per_video.csv
+    R2-4_zS_intra_d0.1_summary.txt
+    R2-4_zS_intra_d0.2_per_video.csv
+    R2-4_zS_intra_d0.2_summary.txt
+    R2-4_zS_intra_d0.3_per_video.csv
+    R2-4_zS_intra_d0.3_summary.txt
+    R2-4_zS_intra_d0.5_per_video.csv
+    R2-4_zS_intra_d0.5_summary.txt
+    R2-4_zS_intra_d1.0_per_video.csv
+    R2-4_zS_intra_d1.0_summary.txt
+    R2-4_zS_nullcheck.py
+    R2-4_zS_reproduction.py
+    R3-1_power_curve.csv
+    R3-1_power_params.txt
+    R3-1_power_sensitivity.R
+    R3-1_power_summary.txt
+    run_R2_4_trialfix.sh
+  R2_6_3_5/  (38 files)
+    r26_condiff_kit/  (5 files)
+    sensitivity_out/  (20 files)
+    xscale_out/  (5 files)
+    02_ssm_chewing_sync_missing.stan
+    03_sensitivity_drift_beta.R
+    04_check_divergence_impact.R
+    05_reported_values.R
+    06_condition_difference_posterior.R
+    div_check_diff_visible.csv
+    div_check_invisible.csv
+    div_check_visible.csv
+  R2_8_2_9_2_11/  (16 files)
+    df_verification_out/  (2 files)
+    dip_figure_out/  (3 files)
+    dip_test_out/  (3 files)
+    multiplicity_out/  (3 files)
+    01_R2-8_df_verification.R
+    02_R2-9_multiplicity_correction.py
+    03_R2-11_dip_test.py
+    04_R2-11_dip_figure.py
+    run_R2_8_trialfix.sh
+  annotation_raw_data/  (177 files)
+    invisible_pair_Human/  (60 files)
+    solo_Human/  (57 files)
+    visible_pair_Human/  (60 files)
+  annotation_raw_data_chewonly/  (177 files)
+    invisible_pair_Human/  (60 files)
+    solo_Human/  (57 files)
+    visible_pair_Human/  (60 files)
+  gridnull_main/  (413 files)
+    Micro_Analysis_Bayesian/  (10 files)
+    coverage_grid/  (3 files)
+    df_verification_out/  (4 files)
+    fig2_timelags/  (3 files)
+    fig4ad_gridnull/  (4 files)
+    fig4e_gridnull/  (15 files)
+    fig_S2_gridnull/  (3 files)
+    out_changepoint_grid/  (2 files)
+    out_changepoint_grid_k3/  (2 files)
+    out_grid_invisible_d0.1/  (34 files)
+    out_grid_invisible_d0.2/  (34 files)
+    out_grid_invisible_d0.3/  (34 files)
+    out_grid_invisible_d0.5/  (34 files)
+    out_grid_invisible_d1.0/  (34 files)
+    out_grid_visible_d0.1/  (34 files)
+    out_grid_visible_d0.2/  (34 files)
+    out_grid_visible_d0.3/  (34 files)
+    out_grid_visible_d0.5/  (34 files)
+    out_grid_visible_d1.0/  (34 files)
+    01_R2-8_df_verification.R
+    02_table1_ci.R
+    03_Micro_Analysis_NOLPM_gridnull_v2.py
+    04_Micro_Analysis_Bayesian.Rmd
+    04_Micro_Analysis_LMM.Rmd
+    04_ssm_chewing_missing_Bayesian.stan
+    05_prevalence_table2.py
+    06_bayes_gridnull_fit.R
+    07_plot_figure4e_gridnull.R
+    08_changepoint_gridnull_v2.py
+    08_plot_figure_S2_gridnull_v1.py
+    08_plot_figure_S2_gridnull_v2.py
+    09_plot_figure4ad_gridnull_v2.py
+    10_plot_figure2_timelags.py
+    beta_intervals_check.txt
+    beta_intervals_seconds.py
+    beta_intervals_seconds_d0.1.txt
+    beta_intervals_seconds_d0.2.txt
+    beta_intervals_seconds_d0.3.txt
+    beta_intervals_seconds_d0.5.txt
+    beta_intervals_seconds_d1.0.txt
+    check_beta_intervals_v2.py
+    coverage_table.py
+    dt_trialfix.csv
+    dt_trialfix_per_pair.csv
+    make_dt_csv.py
+    run_gridnull_main_trialfix.sh
+  k_ICC/  (28 files)
+    ICC_result/  (27 files)
+    ICC_annotate.py
+  .gitignore
+  README.md
+  README_procedure.md

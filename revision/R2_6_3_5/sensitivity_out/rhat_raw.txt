@@ -1,0 +1,41 @@
+=====================================================================
+07_rhat_main.R : convergence of the raw-mode macro fits : 2026-09-14 04:13:10
+fit_dir = /Users/ogura/Dropbox/Documents/Drafts/Jyou_et_al_2025/iScience/iScience_Revision/iscience_revision_analysis/R2_6_3_5/sensitivity_out
+=====================================================================
+[visible_pair] variables summarised: lp__, y_mis, mu0, mu_pair, sigma_pair, mu_sess_init, sigma_sess_init, mu_state, sigma_mu, beta0, beta_tan, sigma_beta, sigma_obs, beta_state
+[visible_pair] excluded generated quantities: y_full_out, y_rep, log_lik
+
+[visible_pair]  file = fit_raw_visible_pair.rds
+  chains = 4 | iter_sampling = 5000 | iter_warmup = 1000
+  summary time: 251.8 s
+  parameters summarised: 11856 (of which y_mis imputations: 11730)
+  max R-hat, all sampled parameters incl. y_mis and lp__ : 1.0034  (mu_state[4])
+  max R-hat, model parameters (no y_mis, no lp__): 1.0034  (mu_state[4])
+  max R-hat, beta_state[1..13]                    : 1.0003  (beta_state[2])
+  min ESS bulk / tail (model parameters)         : 1093 / 530
+  divergent transitions per chain                : 13/24/68/24 (total 129)
+  max-treedepth hits per chain                   : 0/0/0/0
+  all R-hat < 1.1 : TRUE | all R-hat < 1.05 : TRUE | all R-hat <= 1.01 : TRUE
+[invisible_pair] variables summarised: lp__, y_mis, mu0, mu_pair, sigma_pair, mu_sess_init, sigma_sess_init, mu_state, sigma_mu, beta0, beta_tan, sigma_beta, sigma_obs, beta_state
+[invisible_pair] excluded generated quantities: y_full_out, y_rep, log_lik
+
+[invisible_pair]  file = fit_raw_invisible_pair.rds
+  chains = 4 | iter_sampling = 5000 | iter_warmup = 1000
+  summary time: 242.6 s
+  parameters summarised: 11826 (of which y_mis imputations: 11700)
+  max R-hat, all sampled parameters incl. y_mis and lp__ : 1.0065  (mu_pair[14])
+  max R-hat, model parameters (no y_mis, no lp__): 1.0065  (mu_pair[14])
+  max R-hat, beta_state[1..13]                    : 1.0010  (beta_state[1])
+  min ESS bulk / tail (model parameters)         : 544 / 610
+  divergent transitions per chain                : 125/98/94/119 (total 436)
+  max-treedepth hits per chain                   : 0/0/0/0
+  all R-hat < 1.1 : TRUE | all R-hat < 1.05 : TRUE | all R-hat <= 1.01 : TRUE
+
+--- across both conditions ---
+  overall max R-hat (all variables) : 1.0065  (mu_pair[14], invisible_pair)
+  overall max R-hat (model params)  : 1.0065  (mu_pair[14], invisible_pair)
+  total divergent transitions       : 565
+
+Suggested STAR Methods wording (numbers from this log; 3 decimals):
+  "... with all parameters showing R-hat < 1.1 (observed maximum 1.006, for mu_pair[14] in the invisible condition) ..."
+Done.

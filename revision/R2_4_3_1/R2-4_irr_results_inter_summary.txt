@@ -1,0 +1,80 @@
+=====================================================
+R2-4 annotation reliability report
+=====================================================
+
+MODE: inter-rater  (coder B = independent second coder tree 'IRR_final')
+Videos compared      : 25
+By condition         : {'invisible': 10, 'visible': 10, 'solo': 5}
+Rounding grid        : 0.1 s
+Events coder A / B   : 5583 / 4776
+
+Tolerance-agreement curve (pooled over events; F1 CI is
+a bootstrap 95% CI across videos):
+ tolerance  n_videos  total_events_a  total_events_b  total_matched  precision_pooled  recall_pooled  f1_pooled  f1_video_mean  f1_video_ci_lo  f1_video_ci_hi
+     0.050        25            5583            4776            785             0.164          0.141      0.152          0.152           0.137           0.168
+     0.100        25            5583            4776           2332             0.488          0.418      0.450          0.448           0.417           0.480
+     0.150        25            5583            4776           2332             0.488          0.418      0.450          0.448           0.417           0.480
+     0.200        25            5583            4776           3594             0.753          0.644      0.694          0.690           0.660           0.717
+     0.300        25            5583            4776           4220             0.884          0.756      0.815          0.811           0.790           0.830
+     0.500        25            5583            4776           4541             0.951          0.813      0.877          0.873           0.852           0.892
+
+Coder timing discrepancy (matched pairs at tol = 0.5 s; n = 4541):
+  median |dt|  = 0.200 s
+  mean |dt|    = 0.205 s
+  P90 |dt|     = 0.400 s
+  P95 |dt|     = 0.500 s
+  share |dt| <= 0.0 s = 0.151
+  share |dt| <= 0.1 s = 0.431
+  share |dt| <= 0.2 s = 0.643
+  (dt = coder discrepancy; distinct from the
+   inter-participant latency Delta-t in the paper)
+
+Signed timing discrepancy (dt = t_secondcoder - t_original, same matches):
+  mean dt      = +0.050 s
+  median dt    = +0.100 s
+  SD dt        = 0.249 s
+  share dt > 0 = 0.522
+  per-pass median offset: mean = +0.068 s, range -0.100 to +0.200 s, share > 0 = 0.600
+
+Offset-corrected tolerance-agreement curve (DIAGNOSTIC:
+each second-coder series shifted by its per-pass median
+signed dt estimated at tol = 0.5 s; raw curve above remains primary):
+ tolerance  n_videos  total_events_a  total_events_b  total_matched  precision_pooled  recall_pooled  f1_pooled  f1_video_mean  f1_video_ci_lo  f1_video_ci_hi
+     0.050        25            5583            4776            958             0.201          0.172      0.185          0.184           0.171           0.197
+     0.100        25            5583            4776           2557             0.535          0.458      0.494          0.490           0.466           0.514
+     0.150        25            5583            4776           2557             0.535          0.458      0.494          0.490           0.466           0.514
+     0.200        25            5583            4776           3745             0.784          0.671      0.723          0.718           0.690           0.743
+     0.300        25            5583            4776           4248             0.889          0.761      0.820          0.816           0.793           0.835
+     0.500        25            5583            4776           4530             0.948          0.811      0.875          0.872           0.852           0.890
+
+Granularity diagnostic (unmatched events at tol = 0.5 s vs. spacing to the nearest event of the
+SAME coder; tests whether disagreements concentrate in fast chew bursts):
+  original unmatched (n =  1042): median local gap = 0.600 s; share with gap <= 0.3 s = 0.012, <= 0.4 s = 0.078, <= 0.5 s = 0.425
+  original matched   (n =  4541): median local gap = 0.600 s; share with gap <= 0.3 s = 0.011, <= 0.4 s = 0.078, <= 0.5 s = 0.445
+  second   unmatched (n =   235): median local gap = 0.600 s; share with gap <= 0.3 s = 0.009, <= 0.4 s = 0.030, <= 0.5 s = 0.323
+  second   matched   (n =  4541): median local gap = 0.600 s; share with gap <= 0.3 s = 0.003, <= 0.4 s = 0.041, <= 0.5 s = 0.299
+
+Measure-level reliability (paper-relevant derived quantities):
+  ICC(A,1) per-pass mean inter-chew interval (n = 25 passes) = 0.462  (Pearson r = 0.645)
+  Pair videos (n = 10): mean absolute nearest-neighbor inter-participant chew-time lag,
+  computed within each coder's own annotations:
+    ICC(A,1) = 0.694  (Pearson r = 0.870)
+    20170705_03_04_01      original = 0.252 s   second coder = 0.329 s
+    20170706_01_02_03      original = 0.461 s   second coder = 0.445 s
+    20170706_03_04_03      original = 0.210 s   second coder = 0.300 s
+    20170706_05_06_03      original = 0.284 s   second coder = 0.266 s
+    20170707_01_02_01      original = 0.219 s   second coder = 0.317 s
+    20170707_01_02_03      original = 0.196 s   second coder = 0.312 s
+    20170707_03_04_02      original = 0.293 s   second coder = 0.400 s
+    20170707_11_12_01      original = 0.241 s   second coder = 0.285 s
+    20170714_03_04_03      original = 0.217 s   second coder = 0.332 s
+    20170714_07_08_02      original = 0.478 s   second coder = 0.570 s
+
+Event-count reliability:
+  ICC(A,1) per-video event counts   = 0.508
+  ICC(A,1) 20-s window counts (n = 225 windows) = 0.598
+
+Cohen's kappa on 0.1 s bins (reference value only):
+  mean kappa = 0.043 (range -0.040 - 0.154)
+
+Per-video results saved to: R2-4_irr_results_inter_per_video.csv

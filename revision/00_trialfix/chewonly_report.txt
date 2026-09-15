@@ -1,0 +1,15 @@
+src: /Users/ogura/Dropbox/Documents/Drafts/Jyou_et_al_2025/iScience/iScience_Revision/iscience_revision_analysis/annotation_raw_data
+dst: /Users/ogura/Dropbox/Documents/Drafts/Jyou_et_al_2025/iScience/iScience_Revision/iscience_revision_analysis/annotation_raw_data_chewonly
+CSV files processed: 177
+dropped named columns (unique): ['Trial']
+files with empty trailing columns dropped: 0
+files with value-bearing unnamed columns kept as extra Chew_k columns: 2 (22 chew times recovered)
+    invisible_pair_Human/B/20170707_01_02_02_B.csv: 12 values (165.8;167.2;168.3;169.4;170.1;170.8;171.8;173.3;174.2;175;177.8;179.5)
+    invisible_pair_Human/B/20170707_07_08_01_B.csv: 10 values (173.8;174.3;174.9;175.4;176.2;176.7;177.2;177.8;178.6;179.5)
+total events (legacy, all cells)   : 39790
+total events (Chew columns only)   : 37219
+total spurious events removed      : 2571
+files with >=1 spurious event      : 177 / 177
+spurious events per file: min 2, median 14.0, max 41
+first event (legacy) : always 1-1 s (= Trial number 1)
+first event (chew)   : 2.4-19.5 s

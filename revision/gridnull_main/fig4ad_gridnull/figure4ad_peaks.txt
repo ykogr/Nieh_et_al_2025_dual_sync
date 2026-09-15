@@ -1,0 +1,7 @@
+Peak of group-mean curve with 95% CI band at the peak time point
+(S_excess values are proportions x100, i.e. percent)
+
+z_S_t visible: peak mean = 0.43 [0.10, 0.76] at t_center = 79.5 s (n = 29 pairs)
+z_S_t invisible: peak mean = 0.83 [0.60, 1.06] at t_center = 6.5 s (n = 8 pairs)
+S_excess visible: peak mean = 8.18 [-1.07, 17.43] at t_center = 25.5 s (n = 30 pairs)
+S_excess invisible: peak mean = 15.76 [11.11, 20.40] at t_center = 6.5 s (n = 8 pairs)

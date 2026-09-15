@@ -1,0 +1,69 @@
+=====================================================
+R2-4 coder-robustness of the period-resolved zS
+=====================================================
+
+MODE: intra-rater  (coder 'second' = re-annotation tree '../k_ICC/ICC_result', same coder)
+Pair videos           : 12
+delta (tolerance)     : 0.1 s
+Permutations per cell : 10000
+Null shift            : grid (offsets = k * 0.1 s, grid-aligned)
+Periods               : P1:0-20,P2:20-60,P3:60-180
+
+--- P1 ---
+  ICC(A,1) original vs second coder = -0.343   Pearson r = -0.391
+  visible   (n = 6): mean zS original = -1.10, second = -0.04
+  invisible (n = 6): mean zS original = -0.02, second = 0.24
+  visible - invisible difference: original = -1.08, second coder = -0.28
+    20170705_01_02_01      invisible original =  -0.59   second =   0.84
+    20170705_03_04_02      invisible original =   1.45   second =  -1.07
+    20170706_01_02_03      visible   original =  -2.03   second =   0.31
+    20170706_03_04_02      visible   original =  -0.32   second =  -1.09
+    20170706_05_06_03      visible   original =  -1.13   second =   0.09
+    20170707_01_02_03      invisible original =  -0.87   second =  -0.24
+    20170707_11_12_01      invisible original =  -0.05   second =   1.54
+    20170710_01_02_01      visible   original =  -0.43   second =   0.40
+    20170710_07_08_01      visible   original =    nan   second =  -0.27
+    20170710_13_14_03      invisible original =  -0.56   second =   1.01
+    20170710_15_16_02      invisible original =   0.47   second =  -0.66
+    20170714_01_02_02      visible   original =  -1.59   second =   0.34
+
+--- P2 ---
+  ICC(A,1) original vs second coder = 0.192   Pearson r = 0.184
+  visible   (n = 6): mean zS original = 0.24, second = -0.16
+  invisible (n = 6): mean zS original = -0.26, second = 0.27
+  visible - invisible difference: original = +0.50, second coder = -0.44
+    20170705_01_02_01      invisible original =   0.68   second =   1.99
+    20170705_03_04_02      invisible original =  -0.12   second =   0.65
+    20170706_01_02_03      visible   original =   0.99   second =  -0.27
+    20170706_03_04_02      visible   original =   0.18   second =   0.58
+    20170706_05_06_03      visible   original =   0.54   second =  -0.11
+    20170707_01_02_03      invisible original =  -1.46   second =  -1.05
+    20170707_11_12_01      invisible original =  -0.40   second =  -0.51
+    20170710_01_02_01      visible   original =  -1.00   second =   0.63
+    20170710_07_08_01      visible   original =  -0.04   second =  -0.76
+    20170710_13_14_03      invisible original =  -0.20   second =   0.75
+    20170710_15_16_02      invisible original =  -0.05   second =  -0.18
+    20170714_01_02_02      visible   original =   0.75   second =  -1.04
+
+--- P3 ---
+  ICC(A,1) original vs second coder = 0.274   Pearson r = 0.288
+  visible   (n = 6): mean zS original = 0.71, second = -0.25
+  invisible (n = 6): mean zS original = -0.78, second = -0.15
+  visible - invisible difference: original = +1.49, second coder = -0.10
+    20170705_01_02_01      invisible original =   1.38   second =  -0.86
+    20170705_03_04_02      invisible original =  -0.05   second =   1.03
+    20170706_01_02_03      visible   original =  -0.27   second =   0.05
+    20170706_03_04_02      visible   original =   0.33   second =   0.04
+    20170706_05_06_03      visible   original =   0.09   second =  -0.87
+    20170707_01_02_03      invisible original =  -0.92   second =   0.21
+    20170707_11_12_01      invisible original =  -1.87   second =   0.51
+    20170710_01_02_01      visible   original =   2.90   second =   1.35
+    20170710_07_08_01      visible   original =   0.47   second =  -1.04
+    20170710_13_14_03      invisible original =  -2.36   second =  -1.50
+    20170710_15_16_02      invisible original =  -0.86   second =  -0.30
+    20170714_01_02_02      visible   original =   0.73   second =  -1.01
+
+Note: zS computed per STAR Methods (NLOPM matching,
+S = 2*n_match/(n_a+n_b), period-restricted circular-shift
+null); independent reimplementation for the reliability
+check, not the original analysis code.

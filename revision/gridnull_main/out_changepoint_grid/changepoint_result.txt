@@ -1,0 +1,10 @@
+====================================================================
+Change-point segmentation of the group-average z_S(t) curve
+(grid-aligned null; 60 series pooled across 2 input files; min coverage = 0.5; min segment = 5 s; n_cp = 2)
+====================================================================
+retained time points: 169 / 171 (t = 8.5 .. 176.5 s)
+estimated boundaries: c1 = 62.0 s, c2 = 162.0 s  (SSE = 1.4202)
+
+Leave-one-series-out stability:
+  c1 range: 29.0 .. 84.0 s (median 62.0)
+  c2 range: 147.0 .. 162.0 s (median 162.0)

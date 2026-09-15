@@ -1,0 +1,2 @@
+visible: 30 pairs, bins 6.5-176.5 s; >= 15 pairs from 8.5 to 176.5 s; full coverage (30 pairs) from 22.5 s
+invisible: 30 pairs, bins 6.5-176.5 s; >= 15 pairs from 8.5 to 176.5 s; full coverage (30 pairs) from 22.5 s

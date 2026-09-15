@@ -1,0 +1,65 @@
+R2-4 zS null-convention comparison (original annotations only)
+==================================================================
+Pair videos    : 60 (30 visible, 30 invisible)
+deltas         : [0.1, 0.2, 0.3, 0.5, 1.0]
+n_perm         : 2000   seed: 20260827
+null=continuous: offsets ~ U(0,T)  [published pipeline]
+null=grid      : offsets = k * 0.1 s  [grid-aligned, unbiased]
+
+Theoretical inflation of expected matches (continuous null),
+grid-aligned data: 3:2 @0.1, 5:4 @0.2, 7:6 @0.3, 11:10 @0.5, 21:20 @1.0
+
+===== P1 =====
+ delta        null |  mean zS V  mean zS I     V-I |  prev V  prev I
+   0.1  continuous |     +1.098     +1.418  -0.320 |    7/30    8/30
+   0.1        grid |     -0.214     +0.040  -0.253 |    1/30    1/30
+          artifact | mean zS(cont - grid) = +1.345 (SD 0.343, n = 58)
+   0.2  continuous |     +1.105     +1.086  +0.019 |    6/30    4/30
+   0.2        grid |     -0.010     -0.017  +0.007 |    1/30    1/30
+          artifact | mean zS(cont - grid) = +1.109 (SD 0.346, n = 58)
+   0.3  continuous |     +0.525     +0.712  -0.187 |    1/30    2/30
+   0.3        grid |     -0.109     +0.141  -0.250 |    0/30    1/30
+          artifact | mean zS(cont - grid) = +0.603 (SD 0.247, n = 58)
+   0.5  continuous |     +0.322     +0.347  -0.025 |    0/30    0/30
+   0.5        grid |     +0.132     +0.127  +0.005 |    0/30    0/30
+          artifact | mean zS(cont - grid) = +0.205 (SD 0.125, n = 58)
+   1.0  continuous |     +0.321     +0.428  -0.107 |    0/30    0/30
+   1.0        grid |     +0.206     +0.268  -0.062 |    0/30    0/30
+          artifact | mean zS(cont - grid) = +0.138 (SD 0.133, n = 58)
+
+===== P2 =====
+ delta        null |  mean zS V  mean zS I     V-I |  prev V  prev I
+   0.1  continuous |     +2.269     +2.140  +0.129 |   21/30   18/30
+   0.1        grid |     +0.207     -0.070  +0.277 |    1/30    1/30
+          artifact | mean zS(cont - grid) = +2.136 (SD 0.376, n = 60)
+   0.2  continuous |     +1.905     +1.763  +0.142 |   19/30   16/30
+   0.2        grid |     +0.218     -0.113  +0.331 |    2/30    0/30
+          artifact | mean zS(cont - grid) = +1.781 (SD 0.389, n = 60)
+   0.3  continuous |     +0.838     +1.131  -0.294 |    5/30    4/30
+   0.3        grid |     -0.076     +0.283  -0.359 |    2/30    3/30
+          artifact | mean zS(cont - grid) = +0.881 (SD 0.264, n = 60)
+   0.5  continuous |     +0.269     +0.433  -0.164 |    2/30    1/30
+   0.5        grid |     +0.009     +0.163  -0.154 |    1/30    1/30
+          artifact | mean zS(cont - grid) = +0.265 (SD 0.096, n = 60)
+   1.0  continuous |     +0.185     +0.304  -0.120 |    1/30    1/30
+   1.0        grid |     +0.020     +0.125  -0.105 |    1/30    1/30
+          artifact | mean zS(cont - grid) = +0.172 (SD 0.084, n = 60)
+
+===== P3 =====
+ delta        null |  mean zS V  mean zS I     V-I |  prev V  prev I
+   0.1  continuous |     +3.611     +3.162  +0.449 |   29/30   24/30
+   0.1        grid |     +0.382     -0.419  +0.802 |    2/30    0/30
+          artifact | mean zS(cont - grid) = +3.405 (SD 0.687, n = 60)
+   0.2  continuous |     +2.867     +2.828  +0.039 |   26/30   24/30
+   0.2        grid |     +0.187     -0.247  +0.434 |    1/30    1/30
+          artifact | mean zS(cont - grid) = +2.878 (SD 0.642, n = 60)
+   0.3  continuous |     +1.788     +1.421  +0.366 |   14/30   10/30
+   0.3        grid |     +0.208     -0.178  +0.386 |    1/30    0/30
+          artifact | mean zS(cont - grid) = +1.590 (SD 0.422, n = 60)
+   0.5  continuous |     +0.678     +0.554  +0.124 |    2/30    4/30
+   0.5        grid |     +0.241     +0.088  +0.154 |    1/30    2/30
+          artifact | mean zS(cont - grid) = +0.452 (SD 0.124, n = 60)
+   1.0  continuous |     +0.409     +0.385  +0.024 |    2/30    3/30
+   1.0        grid |     +0.164     +0.099  +0.065 |    2/30    3/30
+          artifact | mean zS(cont - grid) = +0.265 (SD 0.114, n = 60)
+

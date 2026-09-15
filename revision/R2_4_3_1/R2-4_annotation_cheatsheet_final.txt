@@ -1,0 +1,83 @@
+# R2-4 アノテーション手順書・最終版(単一抽選15本、シード20260825)
+# 選定: R2-4_irr_final_selection_log.txt(ローカル生成)が正。順序もログの通り。
+# 途中打ち切り耐性: どこで止めても、終わった分が層別無作為標本として成立。
+#   12本目まで完了 = 12/117 = 10.3%(10%超え)、15本完了 = 12.8%
+# ペア動画(visible/invisible)はA→Bの2パス、soloは1パス。合計25パス。
+# パス累計: #1=1 #2=3 #3=5 #4=6 #5=8 #6=10 #7=11 #8=13 #9=15 #10=16 #11=18 #12=20 #13=21 #14=23 #15=25
+# 操作は従来通り(INTAKEは冒頭1回のみ、以降CHEWのみ。自動保存・自動レジューム有効)。
+# 出力は IRR_final/ 以下(旧IRR_outとは分離。旧IRR_outは削除しない)。
+
+## 1本目 20170710_11_02 (Solo・1パス)
+V=$(mdfind -name 20170710_11_02 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w1; cp "$V" w1/
+python ICC_annotate_v2.py w1 --outdir IRR_final/20170710_11_02
+
+## 2本目 20170706_05_06_03 (Visible・2パス)
+V=$(mdfind -name 20170706_05_06_03 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w2; cp "$V" w2/
+python ICC_annotate_v2.py w2 --outdir IRR_final/20170706_05_06_03/A
+python ICC_annotate_v2.py w2 --outdir IRR_final/20170706_05_06_03/B
+
+## 3本目 20170707_01_02_03 (Invisible・2パス)
+V=$(mdfind -name 20170707_01_02_03 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w3; cp "$V" w3/
+python ICC_annotate_v2.py w3 --outdir IRR_final/20170707_01_02_03/A
+python ICC_annotate_v2.py w3 --outdir IRR_final/20170707_01_02_03/B
+
+## 4本目 20170725_07_01 (Solo・1パス)
+V=$(mdfind -name 20170725_07_01 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w4; cp "$V" w4/
+python ICC_annotate_v2.py w4 --outdir IRR_final/20170725_07_01
+
+## 5本目 20170706_03_04_03 (Visible・2パス)
+V=$(mdfind -name 20170706_03_04_03 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w5; cp "$V" w5/
+python ICC_annotate_v2.py w5 --outdir IRR_final/20170706_03_04_03/A
+python ICC_annotate_v2.py w5 --outdir IRR_final/20170706_03_04_03/B
+
+## 6本目 20170705_03_04_01 (Invisible・2パス)
+V=$(mdfind -name 20170705_03_04_01 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w6; cp "$V" w6/
+python ICC_annotate_v2.py w6 --outdir IRR_final/20170705_03_04_01/A
+python ICC_annotate_v2.py w6 --outdir IRR_final/20170705_03_04_01/B
+
+## 7本目 20170724_04_03 (Solo・1パス)
+V=$(mdfind -name 20170724_04_03 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w7; cp "$V" w7/
+python ICC_annotate_v2.py w7 --outdir IRR_final/20170724_04_03
+
+## 8本目 20170706_01_02_03 (Visible・2パス)
+V=$(mdfind -name 20170706_01_02_03 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w8; cp "$V" w8/
+python ICC_annotate_v2.py w8 --outdir IRR_final/20170706_01_02_03/A
+python ICC_annotate_v2.py w8 --outdir IRR_final/20170706_01_02_03/B
+
+## 9本目 20170707_03_04_02 (Invisible・2パス)
+V=$(mdfind -name 20170707_03_04_02 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w9; cp "$V" w9/
+python ICC_annotate_v2.py w9 --outdir IRR_final/20170707_03_04_02/A
+python ICC_annotate_v2.py w9 --outdir IRR_final/20170707_03_04_02/B
+
+## 10本目 20170725_05_01 (Solo・1パス)
+V=$(mdfind -name 20170725_05_01 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w10; cp "$V" w10/
+python ICC_annotate_v2.py w10 --outdir IRR_final/20170725_05_01
+
+## 11本目 20170714_07_08_02 (Visible・2パス)
+V=$(mdfind -name 20170714_07_08_02 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w11; cp "$V" w11/
+python ICC_annotate_v2.py w11 --outdir IRR_final/20170714_07_08_02/A
+python ICC_annotate_v2.py w11 --outdir IRR_final/20170714_07_08_02/B
+
+## 12本目 20170707_11_12_01 (Invisible・2パス) ★ここまでで10%超え
+V=$(mdfind -name 20170707_11_12_01 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w12; cp "$V" w12/
+python ICC_annotate_v2.py w12 --outdir IRR_final/20170707_11_12_01/A
+python ICC_annotate_v2.py w12 --outdir IRR_final/20170707_11_12_01/B
+
+## 13本目 20170725_07_03 (Solo・1パス)
+V=$(mdfind -name 20170725_07_03 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w13; cp "$V" w13/
+python ICC_annotate_v2.py w13 --outdir IRR_final/20170725_07_03
+
+## 14本目 20170714_03_04_03 (Visible・2パス)
+V=$(mdfind -name 20170714_03_04_03 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w14; cp "$V" w14/
+python ICC_annotate_v2.py w14 --outdir IRR_final/20170714_03_04_03/A
+python ICC_annotate_v2.py w14 --outdir IRR_final/20170714_03_04_03/B
+
+## 15本目 20170707_01_02_01 (Invisible・2パス)
+V=$(mdfind -name 20170707_01_02_01 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w15; cp "$V" w15/
+python ICC_annotate_v2.py w15 --outdir IRR_final/20170707_01_02_01/A
+python ICC_annotate_v2.py w15 --outdir IRR_final/20170707_01_02_01/B
+
+# 終了後(どこで止めても):
+zip -r IRR_final.zip IRR_final
+
+# A: 左、B: 右

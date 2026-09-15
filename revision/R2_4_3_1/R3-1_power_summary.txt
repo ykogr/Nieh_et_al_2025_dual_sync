@@ -1,0 +1,32 @@
+=====================================================
+R3-1 sensitivity power analysis: 2026-09-09 16:11:58 
+=====================================================
+
+Design: 2 conditions x 10 dyads/condition x 3 sessions x 3 periods
+Model : z_S ~ condition * period + (1 | dyad_id)
+Estimand: visible - invisible contrast in P3 (Satterthwaite t)
+
+Parameters (from fitted delta = 0.1 z_S LMM):
+  residual SD = 0.99380 | dyad intercept SD = 0.12820
+  fixed effects: intercept 2.29280, P1 contrast 0.17970, P2 -2.39610, P3 -2.68320, P2 contrast 0.05880
+  alpha = 0.050 | nsim = 1000 | seed = 20260823
+
+Power curve:
+ effect_size power_uncorrected power_holm       mc_se nsim
+       0.200             0.123      0.053 0.010386096 1000
+       0.300             0.189      0.094 0.012380590 1000
+       0.400             0.337      0.183 0.014947609 1000
+       0.500             0.472      0.298 0.015786577 1000
+       0.600             0.606      0.433 0.015451990 1000
+       0.700             0.748      0.589 0.013729385 1000
+       0.800             0.843      0.713 0.011504390 1000
+       0.808             0.864      0.740 0.010839926 1000
+       0.900             0.917      0.845 0.008724162 1000
+       1.000             0.960      0.902 0.006196773 1000
+
+MDES at 80% power (uncorrected P3 contrast) : 0.755 SD units of z_S
+MDES at 80% power (Holm across 3 periods)   : 0.861 SD units of z_S
+
+Note: observed P3 contrast (visible - invisible) in the re-run LMM = +0.807 (SE 0.263).
+      (from ../R1_2/lmm_grid_out/lmm_results.txt via R3-1_power_params.txt)
+Post hoc observed power is intentionally NOT reported (circular).

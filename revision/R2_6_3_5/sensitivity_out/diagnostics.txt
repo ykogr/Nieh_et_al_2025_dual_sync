@@ -1,0 +1,11 @@
+Run started: 2026-08-15 15:07:10
+modes = detrend,diff | legacy_complete = TRUE 
+[detrend | visible_pair] N=15600 N_obs=3900 N_mis=11700 N_pair=20 N_session=3 
+[detrend | visible_pair] divergences=167/32/3/26 max_treedepth_hits=0/0/0/0 max_rhat(beta_state)=1.0009 
+[detrend | invisible_pair] N=15600 N_obs=3900 N_mis=11700 N_pair=20 N_session=3 
+[detrend | invisible_pair] divergences=47/31/15/44 max_treedepth_hits=0/0/0/0 max_rhat(beta_state)=1.0009 
+[diff | visible_pair] N=15600 N_obs=3870 N_mis=11730 N_pair=20 N_session=3 
+[diff | visible_pair] divergences=45/29/62/667 max_treedepth_hits=0/0/0/0 max_rhat(beta_state)=1.0085 
+[diff | invisible_pair] N=15600 N_obs=3900 N_mis=11700 N_pair=20 N_session=3 
+[diff | invisible_pair] divergences=12/30/8/23 max_treedepth_hits=0/0/0/0 max_rhat(beta_state)=1.0003 
+Run finished: 2026-08-15 22:52:49 

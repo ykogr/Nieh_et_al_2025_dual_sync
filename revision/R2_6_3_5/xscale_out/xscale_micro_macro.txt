@@ -1,0 +1,50 @@
+=====================================================================
+08_xscale_micro_macro.R : dyad-level micro (P3 z_S) vs macro coupling : 2026-09-14 04:26:39
+data_dir = /Users/ogura/Dropbox/Documents/Drafts/Jyou_et_al_2025/iScience/iScience_Revision/iscience_revision_analysis/annotation_raw_data | micro_dir = /Users/ogura/Dropbox/Documents/Drafts/Jyou_et_al_2025/iScience/iScience_Revision/iscience_revision_analysis/R2_6_3_5/../R1_2 | delta = 0.1 | n_perm = 10000
+=====================================================================
+micro inputs: /Users/ogura/Dropbox/Documents/Drafts/Jyou_et_al_2025/iScience/iScience_Revision/iscience_revision_analysis/R2_6_3_5/../R1_2/out_periods_grid_visible/chew_sync_summary_periods_master.csv ; /Users/ogura/Dropbox/Documents/Drafts/Jyou_et_al_2025/iScience/iScience_Revision/iscience_revision_analysis/R2_6_3_5/../R1_2/out_periods_grid_invisible/chew_sync_summary_periods_master.csv
+
+dyads matched: 20 (visible 10, invisible 10)
+micro-only dyads: 0 | macro-only dyads: 0
+
+--- per-dyad table (also xscale_dyad_table.csv) ---
+  invisible  20170705_01_02   micro_P3_zS = -0.486 (n_sess 3) | macro_real = +0.184  macro_shuffled = -0.014  macro_index = +0.198 (windows 39)
+  invisible  20170705_03_04   micro_P3_zS = +0.698 (n_sess 3) | macro_real = +0.188  macro_shuffled = +0.036  macro_index = +0.152 (windows 39)
+  invisible  20170707_01_02   micro_P3_zS = -0.147 (n_sess 3) | macro_real = +0.053  macro_shuffled = +0.015  macro_index = +0.038 (windows 39)
+  invisible  20170707_03_04   micro_P3_zS = -1.084 (n_sess 3) | macro_real = +0.536  macro_shuffled = +0.132  macro_index = +0.403 (windows 39)
+  invisible  20170707_05_06   micro_P3_zS = -0.949 (n_sess 3) | macro_real = +0.122  macro_shuffled = +0.118  macro_index = +0.004 (windows 39)
+  invisible  20170707_07_08   micro_P3_zS = +0.679 (n_sess 3) | macro_real = +0.023  macro_shuffled = +0.034  macro_index = -0.010 (windows 39)
+  invisible  20170707_09_10   micro_P3_zS = -0.491 (n_sess 3) | macro_real = +0.081  macro_shuffled = -0.000  macro_index = +0.081 (windows 39)
+  invisible  20170707_11_12   micro_P3_zS = -0.614 (n_sess 3) | macro_real = +0.270  macro_shuffled = +0.003  macro_index = +0.267 (windows 39)
+  invisible  20170710_13_14   micro_P3_zS = -0.980 (n_sess 3) | macro_real = +0.073  macro_shuffled = +0.111  macro_index = -0.038 (windows 39)
+  invisible  20170710_15_16   micro_P3_zS = -0.925 (n_sess 3) | macro_real = +0.488  macro_shuffled = +0.028  macro_index = +0.461 (windows 39)
+  visible    20170706_01_02   micro_P3_zS = -0.672 (n_sess 3) | macro_real = +0.023  macro_shuffled = +0.028  macro_index = -0.005 (windows 39)
+  visible    20170706_03_04   micro_P3_zS = +1.212 (n_sess 3) | macro_real = +0.128  macro_shuffled = +0.073  macro_index = +0.055 (windows 39)
+  visible    20170706_05_06   micro_P3_zS = +0.152 (n_sess 3) | macro_real = -0.140  macro_shuffled = +0.122  macro_index = -0.262 (windows 39)
+  visible    20170706_11_12   micro_P3_zS = +0.514 (n_sess 3) | macro_real = +0.298  macro_shuffled = +0.180  macro_index = +0.118 (windows 39)
+  visible    20170710_01_02   micro_P3_zS = +1.726 (n_sess 3) | macro_real = +0.211  macro_shuffled = +0.105  macro_index = +0.106 (windows 39)
+  visible    20170710_07_08   micro_P3_zS = +0.385 (n_sess 3) | macro_real = +0.061  macro_shuffled = +0.038  macro_index = +0.022 (windows 36)
+  visible    20170714_01_02   micro_P3_zS = +0.307 (n_sess 3) | macro_real = -0.188  macro_shuffled = +0.021  macro_index = -0.210 (windows 39)
+  visible    20170714_03_04   micro_P3_zS = -0.218 (n_sess 3) | macro_real = +0.068  macro_shuffled = +0.059  macro_index = +0.009 (windows 39)
+  visible    20170714_05_06   micro_P3_zS = +0.602 (n_sess 3) | macro_real = +0.210  macro_shuffled = +0.009  macro_index = +0.201 (windows 39)
+  visible    20170714_07_08   micro_P3_zS = -0.233 (n_sess 3) | macro_real = -0.310  macro_shuffled = +0.070  macro_index = -0.381 (windows 39)
+
+--- condition means (sanity check against Figure 3 / Figure 5a) ---
+  invisible  micro_P3_zS -0.430 | macro_real +0.202 | macro_shuffled +0.046 | macro_index +0.155
+  visible    micro_P3_zS +0.378 | macro_real +0.036 | macro_shuffled +0.071 | macro_index -0.035
+
+--- association between dyad-level micro P3 z_S and dyad-level macro coupling ---
+  permutation p: two-sided, 10000 permutations of the macro values (within condition for the 'within-condition' rows); seed 20260914
+  [pooled (20 dyads) | macro = macro_index] n = 20 : Spearman rho = -0.050 (perm p = 0.8364) | Pearson r = -0.194 [-0.586, +0.272] (perm p = 0.4136)
+  [within-condition (condition-centred, strata-permuted) | macro = macro_index] n = 20 : Spearman rho = +0.156 (perm p = 0.5206) | Pearson r = +0.085 [-0.372, +0.508] (perm p = 0.7295)
+  [visible only | macro = macro_index] n = 10 : Spearman rho = +0.770 (perm p = 0.0116) | Pearson r = +0.469 [-0.228, +0.848] (perm p = 0.1663)
+  [invisible only | macro = macro_index] n = 10 : Spearman rho = -0.164 (perm p = 0.6553) | Pearson r = -0.356 [-0.805, +0.352] (perm p = 0.3160)
+  [pooled (20 dyads) | macro = macro_real] n = 20 : Spearman rho = -0.096 (perm p = 0.6880) | Pearson r = -0.177 [-0.575, +0.288] (perm p = 0.4646)
+  [within-condition (condition-centred, strata-permuted) | macro = macro_real] n = 20 : Spearman rho = +0.063 (perm p = 0.8004) | Pearson r = +0.061 [-0.392, +0.490] (perm p = 0.8024)
+
+PRIMARY (within-condition, macro_index): Spearman rho = +0.156, perm p = 0.5206, n = 20
+reading: the pooled correlation mixes the between-condition difference (visible: higher micro, lower macro) with the
+         dyad-level association; the within-condition row removes the condition means and is the one to report.
+
+figure: /Users/ogura/Dropbox/Documents/Drafts/Jyou_et_al_2025/iScience/iScience_Revision/iscience_revision_analysis/R2_6_3_5/xscale_out/xscale_micro_macro (.pdf/.png)
+Done.

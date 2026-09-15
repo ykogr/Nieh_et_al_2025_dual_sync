@@ -1,0 +1,22 @@
+====================================================================
+R2-10 null-symmetry check: agreement between shift-A and shift-B
+cells (pair x period, sufficient data): 177
+conditions in master: ['invisible', 'visible']
+delta values in master: [0.1]
+====================================================================
+
+--- delta = 0.1 (n cells = 177) ---
+Pearson r(z_shiftA, z_shiftB)      : 0.9981
+Bland-Altman mean diff (A - B)     : +0.0046
+Bland-Altman SD of diff            : 0.0634
+Bland-Altman 95% LoA               : [-0.1196, +0.1289]
+max |z_shiftA - z_shiftB|          : 0.2385
+max |p_right_shiftA - p_right_shiftB|: 0.0928
+mean KS distance between nulls     : 0.0265  (max 0.1124)
+null skewness  shiftA: mean +0.026  range [-0.447, +0.406]
+null skewness  shiftB: mean +0.024  range [-0.317, +0.574]
+Monte Carlo error benchmark (same side, independent seed):
+  mean |z_shiftA - z_shiftA_ref|   : 0.0127  (max 0.0555)
+  mean |z_shiftA - z_shiftB|       : 0.0437  (max 0.2385)
+  -> A-vs-B discrepancy comparable to the same-side MC error
+     indicates empirical equivalence of shifting A or B.

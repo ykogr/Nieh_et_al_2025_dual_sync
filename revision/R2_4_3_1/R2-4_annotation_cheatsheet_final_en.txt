@@ -1,0 +1,84 @@
+English translation of R2-4_annotation_cheatsheet_final.txt (the original Japanese sheet given to the second coder)
+# R2-4 annotation procedure sheet, final version (single draw of 15 videos, seed 20260825)
+# Selection: R2-4_irr_final_selection_log.txt (generated locally) is authoritative. The order also follows the log.
+# Robust to stopping early: wherever you stop, the completed part is a valid stratified random sample.
+#   12 videos completed = 12/117 = 10.3% (over 10%); 15 completed = 12.8%
+# Pair videos (visible/invisible) take 2 passes, A then B; solo videos take 1 pass. 25 passes in total.
+# Cumulative passes: #1=1 #2=3 #3=5 #4=6 #5=8 #6=10 #7=11 #8=13 #9=15 #10=16 #11=18 #12=20 #13=21 #14=23 #15=25
+# Operation is as before (INTAKE only once at the very beginning, then CHEW only. Auto-save and auto-resume enabled).
+# Output goes under IRR_final/ (kept separate from the old IRR_out. Do not delete the old IRR_out).
+
+## Video 1: 20170710_11_02 (Solo, 1 pass)
+V=$(mdfind -name 20170710_11_02 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w1; cp "$V" w1/
+python ICC_annotate_v2.py w1 --outdir IRR_final/20170710_11_02
+
+## Video 2: 20170706_05_06_03 (Visible, 2 passes)
+V=$(mdfind -name 20170706_05_06_03 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w2; cp "$V" w2/
+python ICC_annotate_v2.py w2 --outdir IRR_final/20170706_05_06_03/A
+python ICC_annotate_v2.py w2 --outdir IRR_final/20170706_05_06_03/B
+
+## Video 3: 20170707_01_02_03 (Invisible, 2 passes)
+V=$(mdfind -name 20170707_01_02_03 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w3; cp "$V" w3/
+python ICC_annotate_v2.py w3 --outdir IRR_final/20170707_01_02_03/A
+python ICC_annotate_v2.py w3 --outdir IRR_final/20170707_01_02_03/B
+
+## Video 4: 20170725_07_01 (Solo, 1 pass)
+V=$(mdfind -name 20170725_07_01 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w4; cp "$V" w4/
+python ICC_annotate_v2.py w4 --outdir IRR_final/20170725_07_01
+
+## Video 5: 20170706_03_04_03 (Visible, 2 passes)
+V=$(mdfind -name 20170706_03_04_03 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w5; cp "$V" w5/
+python ICC_annotate_v2.py w5 --outdir IRR_final/20170706_03_04_03/A
+python ICC_annotate_v2.py w5 --outdir IRR_final/20170706_03_04_03/B
+
+## Video 6: 20170705_03_04_01 (Invisible, 2 passes)
+V=$(mdfind -name 20170705_03_04_01 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w6; cp "$V" w6/
+python ICC_annotate_v2.py w6 --outdir IRR_final/20170705_03_04_01/A
+python ICC_annotate_v2.py w6 --outdir IRR_final/20170705_03_04_01/B
+
+## Video 7: 20170724_04_03 (Solo, 1 pass)
+V=$(mdfind -name 20170724_04_03 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w7; cp "$V" w7/
+python ICC_annotate_v2.py w7 --outdir IRR_final/20170724_04_03
+
+## Video 8: 20170706_01_02_03 (Visible, 2 passes)
+V=$(mdfind -name 20170706_01_02_03 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w8; cp "$V" w8/
+python ICC_annotate_v2.py w8 --outdir IRR_final/20170706_01_02_03/A
+python ICC_annotate_v2.py w8 --outdir IRR_final/20170706_01_02_03/B
+
+## Video 9: 20170707_03_04_02 (Invisible, 2 passes)
+V=$(mdfind -name 20170707_03_04_02 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w9; cp "$V" w9/
+python ICC_annotate_v2.py w9 --outdir IRR_final/20170707_03_04_02/A
+python ICC_annotate_v2.py w9 --outdir IRR_final/20170707_03_04_02/B
+
+## Video 10: 20170725_05_01 (Solo, 1 pass)
+V=$(mdfind -name 20170725_05_01 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w10; cp "$V" w10/
+python ICC_annotate_v2.py w10 --outdir IRR_final/20170725_05_01
+
+## Video 11: 20170714_07_08_02 (Visible, 2 passes)
+V=$(mdfind -name 20170714_07_08_02 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w11; cp "$V" w11/
+python ICC_annotate_v2.py w11 --outdir IRR_final/20170714_07_08_02/A
+python ICC_annotate_v2.py w11 --outdir IRR_final/20170714_07_08_02/B
+
+## Video 12: 20170707_11_12_01 (Invisible, 2 passes) * 10% is exceeded once this one is done
+V=$(mdfind -name 20170707_11_12_01 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w12; cp "$V" w12/
+python ICC_annotate_v2.py w12 --outdir IRR_final/20170707_11_12_01/A
+python ICC_annotate_v2.py w12 --outdir IRR_final/20170707_11_12_01/B
+
+## Video 13: 20170725_07_03 (Solo, 1 pass)
+V=$(mdfind -name 20170725_07_03 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w13; cp "$V" w13/
+python ICC_annotate_v2.py w13 --outdir IRR_final/20170725_07_03
+
+## Video 14: 20170714_03_04_03 (Visible, 2 passes)
+V=$(mdfind -name 20170714_03_04_03 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w14; cp "$V" w14/
+python ICC_annotate_v2.py w14 --outdir IRR_final/20170714_03_04_03/A
+python ICC_annotate_v2.py w14 --outdir IRR_final/20170714_03_04_03/B
+
+## Video 15: 20170707_01_02_01 (Invisible, 2 passes)
+V=$(mdfind -name 20170707_01_02_01 | grep -Ei '\.(mp4|mov|avi|mkv|m4v|wmv)$' | head -1); mkdir -p w15; cp "$V" w15/
+python ICC_annotate_v2.py w15 --outdir IRR_final/20170707_01_02_01/A
+python ICC_annotate_v2.py w15 --outdir IRR_final/20170707_01_02_01/B
+
+# After finishing (wherever you stopped):
+zip -r IRR_final.zip IRR_final
+
+# A: left, B: right

@@ -1,0 +1,46 @@
+=====================================================================
+R1-2 dyad influence / distribution analysis: 2026-09-11 04:04:24 
+model: z_S ~ condition * period + (1 | dyad_id); contrast = visible - invisible in P3 (emmeans, unadjusted)
+inputs: out_periods_grid_visible/chew_sync_summary_periods_master.csv ; out_periods_grid_invisible/chew_sync_summary_periods_master.csv 
+=====================================================================
+
+############## delta = 0.1 | n rows = 177 | n dyads = 20 ##############
+
+[full sample] P3 contrast: est = 0.807, SE = 0.263, df = 97.9, t = 3.07, p = 0.0028, 95% CI [0.286, 1.329]
+
+[leave-one-dyad-out, 20 refits] P3 contrast (visible - invisible)
+ delta   dropped_dyad dropped_condition n_rows estimate    se    df    t      p ci_lo ci_hi
+   0.1 20170705_01_02         invisible    168    0.801 0.270  88.3 2.97 0.0038 0.265 1.337
+   0.1 20170705_03_04         invisible    168    0.933 0.257 102.2 3.63 0.0004 0.423 1.442
+   0.1 20170706_01_02           visible    168    0.924 0.270  87.2 3.43 0.0009 0.388 1.460
+   0.1 20170706_03_04           visible    168    0.715 0.272  91.8 2.63 0.0101 0.175 1.255
+   0.1 20170706_05_06           visible    168    0.833 0.274  90.4 3.03 0.0031 0.288 1.378
+   0.1 20170706_11_12           visible    168    0.792 0.270  89.0 2.93 0.0043 0.255 1.330
+   0.1 20170707_01_02         invisible    168    0.839 0.271  89.3 3.10 0.0026 0.301 1.377
+   0.1 20170707_03_04         invisible    168    0.735 0.271  92.4 2.71 0.0079 0.197 1.272
+   0.1 20170707_05_06         invisible    169    0.750 0.270  92.3 2.78 0.0066 0.214 1.286
+   0.1 20170707_07_08         invisible    169    0.931 0.270  87.4 3.45 0.0009 0.395 1.467
+   0.1 20170707_09_10         invisible    168    0.801 0.274  91.3 2.93 0.0043 0.257 1.344
+   0.1 20170707_11_12         invisible    168    0.787 0.274  89.6 2.87 0.0051 0.242 1.332
+   0.1 20170710_01_02           visible    168    0.658 0.268  93.7 2.46 0.0158 0.126 1.189
+   0.1 20170710_07_08           visible    169    0.807 0.276  92.5 2.92 0.0044 0.258 1.355
+   0.1 20170710_13_14         invisible    168    0.746 0.268  90.2 2.79 0.0065 0.215 1.278
+   0.1 20170710_15_16         invisible    168    0.752 0.276  91.2 2.72 0.0077 0.204 1.301
+   0.1 20170714_01_02           visible    168    0.815 0.275  90.4 2.97 0.0039 0.269 1.362
+   0.1 20170714_03_04           visible    168    0.874 0.271  87.5 3.22 0.0018 0.335 1.413
+   0.1 20170714_05_06           visible    168    0.782 0.272  89.1 2.88 0.0050 0.242 1.323
+   0.1 20170714_07_08           visible    168    0.875 0.269  94.9 3.25 0.0016 0.341 1.410
+  range of estimates: 0.658 to 0.933 (full sample 0.807); all positive: TRUE; max p = 0.0158; n with p < 0.05: 20 / 20
+  most influential dyad (largest drop in estimate when removed): 20170710_01_02 (visible), est -> 0.658 (change -0.150)
+  largest increase when removed: 20170705_03_04 (invisible), est -> 0.933 (change +0.125)
+
+[sign distribution in P3]
+ delta period condition                   unit  n n_positive prop_positive mean_zS median_zS sign_test_p wilcoxon_vs0_p
+   0.1     P3 invisible dyad mean (3 sessions) 10          2         0.200  -0.430    -0.552      0.1094         0.1055
+   0.1     P3   visible dyad mean (3 sessions) 10          7         0.700   0.378     0.346      0.3438         0.1602
+   0.1     P3 invisible                session 30         10         0.333  -0.430    -0.363      0.0987         0.0732
+   0.1     P3   visible                session 30         22         0.733   0.378     0.308      0.0161         0.0137
+  Wilcoxon rank-sum, dyad means visible vs invisible in P3: W = 22, p = 0.0355 (n = 10 vs 10)
+  dyad means, visible:   -0.67 -0.23 -0.22 +0.15 +0.31 +0.38 +0.51 +0.60 +1.21 +1.73
+  dyad means, invisible: -1.08 -0.98 -0.95 -0.93 -0.61 -0.49 -0.49 -0.15 +0.68 +0.70
+  figure -> dyad_influence_grid/fig_dyad_influence_delta01 

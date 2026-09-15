@@ -1,0 +1,39 @@
+R2-4 jitter-injection attenuation simulation
+============================================================
+Pair videos            : 60 (30 visible, 30 invisible)
+delta (zS tolerance)   : 0.1
+jitter SD              : 0.24 s (observed coder SD: 0.235 intra / 0.249 inter)
+miss rate              : 0.0
+replicates x n_perm    : 10 x 1000
+null shift             : grid
+seed                   : 20260827
+
+Noise-magnitude check (rep 1, injected vs original):
+  median |dt| = 0.100 s (observed coder value: 0.200 s)
+  mean F1 @0.1 = 0.440 (observed: 0.536 intra / 0.450 inter)
+  mean F1 @0.2 = 0.716 (observed: 0.784 intra / 0.694 inter)
+
+--- P1 ---
+  real    : mean zS  visible -0.223   invisible +0.027   contrast (V-I) -0.250
+  jitter  : mean zS  visible -0.087   invisible -0.069   contrast -0.018 (SD over reps 0.330)
+            attenuation factor  visible 0.39   invisible -2.54
+            replicates preserving contrast sign: 60% (6/10)
+  null    : mean zS  visible +0.097   invisible -0.067   contrast +0.164 (SD over reps 0.290)
+            replicates with |null contrast| >= |real contrast|: 50% (5/10)
+
+--- P2 ---
+  real    : mean zS  visible +0.223   invisible -0.060   contrast (V-I) +0.283
+  jitter  : mean zS  visible +0.031   invisible +0.087   contrast -0.056 (SD over reps 0.226)
+            attenuation factor  visible 0.14   invisible -1.45
+            replicates preserving contrast sign: 20% (2/10)
+  null    : mean zS  visible +0.087   invisible -0.002   contrast +0.089 (SD over reps 0.311)
+            replicates with |null contrast| >= |real contrast|: 30% (3/10)
+
+--- P3 ---
+  real    : mean zS  visible +0.383   invisible -0.420   contrast (V-I) +0.804
+  jitter  : mean zS  visible +0.147   invisible +0.073   contrast +0.074 (SD over reps 0.315)
+            attenuation factor  visible 0.38   invisible -0.17
+            replicates preserving contrast sign: 50% (5/10)
+  null    : mean zS  visible -0.035   invisible -0.016   contrast -0.019 (SD over reps 0.232)
+            replicates with |null contrast| >= |real contrast|: 0% (0/10)
+

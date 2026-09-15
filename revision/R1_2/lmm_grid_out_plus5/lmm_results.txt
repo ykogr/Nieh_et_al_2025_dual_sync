@@ -1,0 +1,262 @@
+=====================================================
+R1-2 period-resolved LMM analysis: 2026-09-08 16:27:54 
+Excluded rows (insufficient events): 1 
+=====================================================
+
+-----------------------------------------------------
+DV = z_S | delta = 0.1 | n rows = 179
+-----------------------------------------------------
+Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+lmerModLmerTest]
+Formula: f
+   Data: dat
+
+REML criterion at convergence: 501
+
+Scaled residuals: 
+     Min       1Q   Median       3Q      Max 
+-2.47166 -0.59012 -0.03904  0.63701  2.50521 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ dyad_id  (Intercept) 0.01996  0.1413  
+ Residual             0.92498  0.9618  
+Number of obs: 179, groups:  dyad_id, 20
+
+Fixed effects:
+                           Estimate Std. Error        df t value Pr(>|t|)   
+(Intercept)                 0.09136    0.18119  97.00210   0.504  0.61526   
+conditionvisible           -0.11595    0.25834  98.47126  -0.449  0.65454   
+periodP2                   -0.07716    0.24833 155.16648  -0.311  0.75643   
+periodP3                   -0.56930    0.24833 155.16648  -2.293  0.02322 * 
+conditionvisible:periodP2   0.20154    0.35272 155.40259   0.571  0.56857   
+conditionvisible:periodP3   0.98337    0.35272 155.40259   2.788  0.00597 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) cndtnv perdP2 perdP3 cnd:P2
+conditnvsbl -0.701                            
+periodP2    -0.685  0.481                     
+periodP3    -0.685  0.481  0.500              
+cndtnvsb:P2  0.482 -0.689 -0.704 -0.352       
+cndtnvsb:P3  0.482 -0.689 -0.352 -0.704  0.504
+
+--- Type III ANOVA (Satterthwaite) ---
+Type III Analysis of Variance Table with Satterthwaite's method
+                 Sum Sq Mean Sq NumDF   DenDF F value  Pr(>F)  
+condition        2.9194  2.9194     1  18.151  3.1561 0.09241 .
+period           0.3362  0.1681     2 155.323  0.1817 0.83399  
+condition:period 8.0539  4.0269     2 155.323  4.3535 0.01447 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- condition contrast within each period (Holm) ---
+period = P1:
+ contrast            estimate    SE   df lower.CL upper.CL t.ratio p.value
+ invisible - visible   0.1159 0.258 98.0   -0.397    0.629   0.449  0.6546
+
+period = P2:
+ contrast            estimate    SE   df lower.CL upper.CL t.ratio p.value
+ invisible - visible  -0.0856 0.256 96.6   -0.594    0.423  -0.334  0.7391
+
+period = P3:
+ contrast            estimate    SE   df lower.CL upper.CL t.ratio p.value
+ invisible - visible  -0.8674 0.256 96.6   -1.376   -0.359  -3.385  0.0010
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+
+--- period contrasts within each condition (Holm) ---
+condition = invisible:
+ contrast estimate    SE  df lower.CL upper.CL t.ratio p.value
+ P1 - P2    0.0772 0.248 155  -0.5238    0.678   0.311  0.7564
+ P1 - P3    0.5693 0.248 155  -0.0317    1.170   2.293  0.0697
+ P2 - P3    0.4921 0.248 155  -0.1089    1.093   1.982  0.0985
+
+condition = visible:
+ contrast estimate    SE  df lower.CL upper.CL t.ratio p.value
+ P1 - P2   -0.1244 0.251 155  -0.7307    0.482  -0.496  0.6203
+ P1 - P3   -0.4141 0.251 155  -1.0204    0.192  -1.653  0.3012
+ P2 - P3   -0.2897 0.248 155  -0.8907    0.311  -1.167  0.4903
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+Conf-level adjustment: bonferroni method for 3 estimates 
+P value adjustment: holm method for 3 tests 
+
+-----------------------------------------------------
+DV = STR | delta = 0.1 | n rows = 178
+-----------------------------------------------------
+Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+lmerModLmerTest]
+Formula: f
+   Data: dat
+
+REML criterion at convergence: -630.6
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.7567 -0.6315 -0.3174 -0.0345  4.7129 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ dyad_id  (Intercept) 0.00000  0.00000 
+ Residual             0.00133  0.03648 
+Number of obs: 178, groups:  dyad_id, 20
+
+Fixed effects:
+                            Estimate Std. Error         df t value Pr(>|t|)  
+(Intercept)                 0.011578   0.006773 172.000000   1.709   0.0892 .
+conditionvisible           -0.006218   0.009579 172.000000  -0.649   0.5171  
+periodP2                    0.015088   0.009499 172.000000   1.588   0.1140  
+periodP3                    0.011457   0.009499 172.000000   1.206   0.2294  
+conditionvisible:periodP2  -0.005448   0.013433 172.000000  -0.406   0.6856  
+conditionvisible:periodP3   0.010786   0.013433 172.000000   0.803   0.4231  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) cndtnv perdP2 perdP3 cnd:P2
+conditnvsbl -0.707                            
+periodP2    -0.713  0.504                     
+periodP3    -0.713  0.504  0.508              
+cndtnvsb:P2  0.504 -0.713 -0.707 -0.360       
+cndtnvsb:P3  0.504 -0.713 -0.360 -0.707  0.508
+optimizer (nloptwrap) convergence code: 0 (OK)
+boundary (singular) fit: see help('isSingular')
+
+
+--- Type III ANOVA (Satterthwaite) ---
+Type III Analysis of Variance Table with Satterthwaite's method
+                    Sum Sq   Mean Sq NumDF DenDF F value  Pr(>F)  
+condition        0.0008767 0.0008767     1   172  0.6589 0.41806  
+period           0.0089465 0.0044733     2   172  3.3621 0.03695 *
+condition:period 0.0020462 0.0010231     2   172  0.7690 0.46507  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- condition contrast within each period (Holm) ---
+period = P1:
+ contrast            estimate      SE  df lower.CL upper.CL t.ratio p.value
+ invisible - visible  0.00622 0.00958 112  -0.0128   0.0252   0.649  0.5177
+
+period = P2:
+ contrast            estimate      SE  df lower.CL upper.CL t.ratio p.value
+ invisible - visible  0.01167 0.00942 109  -0.0070   0.0303   1.239  0.2181
+
+period = P3:
+ contrast            estimate      SE  df lower.CL upper.CL t.ratio p.value
+ invisible - visible -0.00457 0.00942 109  -0.0232   0.0141  -0.485  0.6287
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+
+--- period contrasts within each condition (Holm) ---
+condition = invisible:
+ contrast estimate      SE  df lower.CL upper.CL t.ratio p.value
+ P1 - P2  -0.01509 0.00950 155  -0.0381 0.007906  -1.588  0.3429
+ P1 - P3  -0.01146 0.00950 155  -0.0345 0.011538  -1.206  0.4594
+ P2 - P3   0.00363 0.00942 154  -0.0192 0.026427   0.386  0.7003
+
+condition = visible:
+ contrast estimate      SE  df lower.CL upper.CL t.ratio p.value
+ P1 - P2  -0.00964 0.00950 155  -0.0326 0.013355  -1.015  0.3656
+ P1 - P3  -0.02224 0.00950 155  -0.0452 0.000752  -2.341  0.0615
+ P2 - P3  -0.01260 0.00942 154  -0.0354 0.010193  -1.338  0.3656
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+Conf-level adjustment: bonferroni method for 3 estimates 
+P value adjustment: holm method for 3 tests 
+
+-----------------------------------------------------
+DV = Max_episode | delta = 0.1 | n rows = 178
+-----------------------------------------------------
+Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+lmerModLmerTest]
+Formula: f
+   Data: dat
+
+REML criterion at convergence: 696.4
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-1.5194 -0.5894 -0.1345  0.2539  2.8088 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ dyad_id  (Intercept) 0.06168  0.2484  
+ Residual             2.92990  1.7117  
+Number of obs: 178, groups:  dyad_id, 20
+
+Fixed effects:
+                          Estimate Std. Error       df t value Pr(>|t|)    
+(Intercept)                 0.2403     0.3275  99.7611   0.734   0.4649    
+conditionvisible           -0.1382     0.4632  99.7611  -0.298   0.7660    
+periodP2                    0.8264     0.4458 154.7505   1.854   0.0657 .  
+periodP3                    1.7931     0.4458 154.7505   4.022    9e-05 ***
+conditionvisible:periodP2  -0.4285     0.6305 154.7505  -0.680   0.4978    
+conditionvisible:periodP3   0.6049     0.6305 154.7505   0.959   0.3389    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) cndtnv perdP2 perdP3 cnd:P2
+conditnvsbl -0.707                            
+periodP2    -0.692  0.490                     
+periodP3    -0.692  0.490  0.509              
+cndtnvsb:P2  0.490 -0.692 -0.707 -0.360       
+cndtnvsb:P3  0.490 -0.692 -0.360 -0.707  0.509
+
+--- Type III ANOVA (Satterthwaite) ---
+Type III Analysis of Variance Table with Satterthwaite's method
+                  Sum Sq Mean Sq NumDF   DenDF F value    Pr(>F)    
+condition          0.236   0.236     1  18.254  0.0806    0.7797    
+period           137.647  68.824     2 154.593 23.4901 1.236e-09 ***
+condition:period   8.084   4.042     2 154.593  1.3796    0.2548    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- condition contrast within each period (Holm) ---
+period = P1:
+ contrast            estimate    SE   df lower.CL upper.CL t.ratio p.value
+ invisible - visible    0.138 0.463 99.0   -0.781    1.057   0.298  0.7661
+
+period = P2:
+ contrast            estimate    SE   df lower.CL upper.CL t.ratio p.value
+ invisible - visible    0.567 0.456 96.2   -0.338    1.471   1.244  0.2167
+
+period = P3:
+ contrast            estimate    SE   df lower.CL upper.CL t.ratio p.value
+ invisible - visible   -0.467 0.456 96.2   -1.371    0.438  -1.024  0.3084
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+
+--- period contrasts within each condition (Holm) ---
+condition = invisible:
+ contrast estimate    SE  df lower.CL upper.CL t.ratio p.value
+ P1 - P2    -0.826 0.446 154    -1.91    0.253  -1.853  0.0657
+ P1 - P3    -1.793 0.446 154    -2.87   -0.714  -4.021  0.0003
+ P2 - P3    -0.967 0.442 154    -2.04    0.103  -2.187  0.0605
+
+condition = visible:
+ contrast estimate    SE  df lower.CL upper.CL t.ratio p.value
+ P1 - P2    -0.398 0.446 154    -1.48    0.681  -0.892  0.3736
+ P1 - P3    -2.398 0.446 154    -3.48   -1.319  -5.378  <.0001
+ P2 - P3    -2.000 0.442 154    -3.07   -0.930  -4.525  <.0001
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+Conf-level adjustment: bonferroni method for 3 estimates 
+P value adjustment: holm method for 3 tests 
+
+--- group-level one-sample t: z_S vs 0, per condition x period (Holm within delta) ---
+  condition period mean_zS    sd  n      t      p p_holm
+1 invisible     P1  0.0914 1.065 30  0.470 0.6420  1.000
+2 invisible     P2  0.0142 1.010 30  0.077 0.9391  1.000
+3 invisible     P3 -0.4779 1.146 30 -2.285 0.0298  0.149
+4   visible     P1 -0.0248 0.874 29 -0.153 0.8798  1.000
+5   visible     P2  0.0998 0.819 30  0.667 0.5100  1.000
+6   visible     P3  0.3895 0.868 30  2.456 0.0203  0.122

@@ -1,0 +1,97 @@
+=====================================================
+R1-2 period-resolved LMM analysis: 2026-09-08 21:45:07 
+Excluded rows (insufficient events): 1 
+=====================================================
+
+-----------------------------------------------------
+DV = z_S | delta = 0.1 | n rows = 177
+-----------------------------------------------------
+Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+lmerModLmerTest]
+Formula: f
+   Data: dat
+
+REML criterion at convergence: 492.6
+
+Scaled residuals: 
+     Min       1Q   Median       3Q      Max 
+-2.51778 -0.56466 -0.03565  0.61802  2.65020 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ dyad_id  (Intercept) 0.05808  0.2410  
+ Residual             0.88346  0.9399  
+Number of obs: 177, groups:  dyad_id, 20
+
+Fixed effects:
+                          Estimate Std. Error       df t value Pr(>|t|)  
+(Intercept)                 0.2406     0.1935  82.2505   1.243   0.2173  
+conditionvisible           -0.3574     0.2716  80.7684  -1.316   0.1919  
+periodP2                   -0.1157     0.2471 153.8452  -0.468   0.6405  
+periodP3                   -0.2826     0.2471 153.8452  -1.144   0.2546  
+conditionvisible:periodP2   0.5286     0.3479 153.6913   1.519   0.1307  
+conditionvisible:periodP3   0.8769     0.3479 153.6913   2.521   0.0127 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) cndtnv perdP2 perdP3 cnd:P2
+conditnvsbl -0.712                            
+periodP2    -0.661  0.471                     
+periodP3    -0.661  0.471  0.518              
+cndtnvsb:P2  0.470 -0.658 -0.710 -0.368       
+cndtnvsb:P3  0.470 -0.658 -0.368 -0.710  0.513
+
+--- Type III ANOVA (Satterthwaite) ---
+Type III Analysis of Variance Table with Satterthwaite's method
+                 Sum Sq Mean Sq NumDF   DenDF F value  Pr(>F)  
+condition        0.3450 0.34497     1  18.149  0.3905 0.53983  
+period           0.8958 0.44791     2 153.513  0.5070 0.60331  
+condition:period 5.6738 2.83690     2 153.513  3.2111 0.04303 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- condition contrast within each period (Holm) ---
+period = P1:
+ contrast            estimate    SE   df lower.CL upper.CL t.ratio p.value
+ invisible - visible    0.357 0.272 80.3   -0.183  0.89798   1.316  0.1920
+
+period = P2:
+ contrast            estimate    SE   df lower.CL upper.CL t.ratio p.value
+ invisible - visible   -0.171 0.266 76.1   -0.700  0.35768  -0.645  0.5211
+
+period = P3:
+ contrast            estimate    SE   df lower.CL upper.CL t.ratio p.value
+ invisible - visible   -0.519 0.266 76.1   -1.048  0.00936  -1.956  0.0541
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+
+--- period contrasts within each condition (Holm) ---
+condition = invisible:
+ contrast estimate    SE  df lower.CL upper.CL t.ratio p.value
+ P1 - P2     0.116 0.247 154   -0.483  0.71400   0.468  0.9850
+ P1 - P3     0.283 0.247 154   -0.316  0.88096   1.143  0.7642
+ P2 - P3     0.167 0.243 153   -0.420  0.75440   0.688  0.9850
+
+condition = visible:
+ contrast estimate    SE  df lower.CL upper.CL t.ratio p.value
+ P1 - P2    -0.413 0.245 153   -1.006  0.17983  -1.686  0.1876
+ P1 - P3    -0.594 0.245 153   -1.187 -0.00153  -2.427  0.0492
+ P2 - P3    -0.181 0.243 153   -0.769  0.40609  -0.747  0.4560
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+Conf-level adjustment: bonferroni method for 3 estimates 
+P value adjustment: holm method for 3 tests 
+
+[skip] STR/Max_episode at delta=0.1: not enough episode data
+
+--- group-level one-sample t: z_S vs 0, per condition x period (Holm within delta) ---
+  condition period mean_zS    sd  n      t       p p_holm
+1 invisible     P1   0.242 1.012 28  1.265 0.21654 0.8662
+2 invisible     P2   0.125 0.870 30  0.786 0.43798 1.0000
+3 invisible     P3  -0.042 1.232 30 -0.187 0.85311 1.0000
+4   visible     P1  -0.118 0.968 29 -0.659 0.51543 1.0000
+5   visible     P2   0.296 0.810 30  2.003 0.05465 0.2733
+6   visible     P3   0.477 0.860 30  3.040 0.00498 0.0299

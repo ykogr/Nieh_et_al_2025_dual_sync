@@ -1,0 +1,30 @@
+R2-6 / R3-5 macro-scale condition difference: Delta = mean_b beta_invisible(b) - mean_b beta_visible(b)
+run: 2026-09-10 16:12:07
+mode = detrend
+fits: sensitivity_out/fit_detrend_invisible_pair.rds, sensitivity_out/fit_detrend_visible_pair.rds
+draws per fit used: 20000 (invisible 20000, visible 20000); bins: 13; fits independent, paired by draw index
+
+mean_beta invisible = 0.157607   mean_beta visible = -0.017875
+Delta mean = 0.175482   median = 0.175509   sd = 0.042001
+Delta 95% CrI = [0.091900, 0.257959]
+P(Delta > 0) = 1.000000   (draws with Delta <= 0: 0 of 20000)
+  -> report as P(Delta > 0) > 0.99995 (no draw <= 0 among 20000)
+check, random re-pairing (seed 20260910): P(Delta > 0) = 1.000000, 95% CrI = [0.092917, 0.258106]
+reported (2 decimals): Delta = 0.18 [0.09, 0.26]
+
+bin-wise difference Delta_b = beta_invisible(b) - beta_visible(b):
+bin_model bin_data window_end_s       mean       q2.5      q97.5      P(>0) excl_zero
+        1        6           60     0.1797     0.0198     0.3531     0.9858         1
+        2        7           70     0.1771     0.0384     0.3245     0.9929         1
+        3        8           80     0.1670     0.0323     0.3064     0.9907         1
+        4        9           90     0.1538     0.0179     0.2865     0.9855         1
+        5       10          100     0.1334    -0.0112     0.2587     0.9666         0
+        6       11          110     0.1309    -0.0153     0.2605     0.9621         0
+        7       12          120     0.1371    -0.0104     0.2711     0.9666         0
+        8       13          130     0.1497     0.0007     0.2888     0.9757         1
+        9       14          140     0.1779     0.0382     0.3236     0.9931         1
+       10       15          150     0.2068     0.0676     0.3600     0.9976         1
+       11       16          160     0.2119     0.0674     0.3645     0.9971         1
+       12       17          170     0.2274     0.0658     0.3977     0.9955         1
+       13       18          180     0.2285     0.0357     0.4233     0.9873         1
+bins with 95% CrI of Delta_b excluding zero: 10 of 13 (bins: 1;2;3;4;8;9;10;11;12;13; windows ending: 60;70;80;90;130;140;150;160;170;180 s)

@@ -1,0 +1,15 @@
+R2-9 multiple-comparison correction of Table 2 session-level Monte Carlo p-values
+alpha = 0.05; Holm family = 3 sessions within dyad; BH family = all sessions within condition x delta
+chance P(>=1 of 3 sessions significant | H0) = 0.142625
+
+ delta condition  raw_ge1  raw_ge2  raw_ge3  holm_ge1  holm_ge2  holm_ge3  bh_ge1  bh_ge2  bh_ge3  n_dyads  binom_p_ge1_vs_chance
+   0.1 invisible        1        0        0         0         0         0       0       0       0       10               0.785361
+   0.1   visible        0        0        0         0         0         0       0       0       0       10               1.000000
+   0.2 invisible        2        0        0         0         0         0       0       0       0       10               0.428308
+   0.2   visible        4        0        0         1         0         0       0       0       0       10               0.042459
+   0.3 invisible        0        0        0         0         0         0       0       0       0       10               1.000000
+   0.3   visible        1        0        0         0         0         0       0       0       0       10               0.785361
+   0.5 invisible        2        0        0         1         0         0       0       0       0       10               0.428308
+   0.5   visible        1        0        0         1         0         0       0       0       0       10               0.785361
+   1.0 invisible        1        0        0         0         0         0       0       0       0       10               0.785361
+   1.0   visible        3        1        0         1         0         0       0       0       0       10               0.161026

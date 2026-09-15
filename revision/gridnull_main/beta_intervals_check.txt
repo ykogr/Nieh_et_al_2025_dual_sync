@@ -1,0 +1,27 @@
+# generated 2026-09-09 18:44 by run_gridnull_main_trialfix.sh STAGE=bayes_check
+# python check_beta_intervals_v2.py stan_fits/summary_z_S_t_delta01_human.csv stan_fits/summary_z_S_t_delta02_human.csv stan_fits/summary_z_S_t_delta03_human.csv stan_fits/summary_z_S_t_delta05_human.csv stan_fits/summary_z_S_t_delta1_human.csv
+== stan_fits/summary_z_S_t_delta01_human.csv ==
+  beta_state bins: 171
+  beta_state max Rhat: 1.0097   min ess_bulk: 991   min ess_tail: 3503   lp__ Rhat: 1.00806935575105
+  positive (q2.5 > 0), 54 bins: [(17, 21), (60, 82), (116, 124), (148, 162), (170, 171)]
+  negative (q97.5 < 0), 4 bins: [(32, 35)]
+== stan_fits/summary_z_S_t_delta02_human.csv ==
+  beta_state bins: 171
+  beta_state max Rhat: 1.0062   min ess_bulk: 1829   min ess_tail: 5531   lp__ Rhat: 1.00255591337336
+  positive (q2.5 > 0), 7 bins: [(73, 79)]
+  negative (q97.5 < 0), 0 bins: []
+== stan_fits/summary_z_S_t_delta03_human.csv ==
+  beta_state bins: 171
+  beta_state max Rhat: 1.0163   min ess_bulk: 428   min ess_tail: 1868   lp__ Rhat: 1.00509393176753
+  positive (q2.5 > 0), 17 bins: [(73, 82), (118, 124)]
+  negative (q97.5 < 0), 26 bins: [(30, 55)]
+== stan_fits/summary_z_S_t_delta05_human.csv ==
+  beta_state bins: 171
+  beta_state max Rhat: 1.0013   min ess_bulk: 1509   min ess_tail: 4502   lp__ Rhat: 1.00442557512701
+  positive (q2.5 > 0), 26 bins: [(72, 86), (97, 107)]
+  negative (q97.5 < 0), 44 bins: [(7, 16), (19, 42), (47, 56)]
+== stan_fits/summary_z_S_t_delta1_human.csv ==
+  beta_state bins: 171
+  beta_state max Rhat: 1.0015   min ess_bulk: 1634   min ess_tail: 4807   lp__ Rhat: 1.00415154199461
+  positive (q2.5 > 0), 12 bins: [(72, 83)]
+  negative (q97.5 < 0), 22 bins: [(10, 15), (21, 36)]

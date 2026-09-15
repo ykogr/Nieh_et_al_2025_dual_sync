@@ -1,0 +1,6 @@
+# generated 2026-09-09 15:53 from ../R1_2/lmm_grid_out/lmm_results.txt (DV = z_S, delta = 0.1)
+resid_sd=0.9938
+dyad_sd=0.1282
+observed_P3_contrast=0.80750
+observed_P3_se=0.263
+grid=0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.808,0.9,1

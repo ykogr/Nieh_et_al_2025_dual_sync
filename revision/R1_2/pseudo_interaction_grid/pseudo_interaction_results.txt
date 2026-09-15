@@ -1,0 +1,113 @@
+=====================================================
+R1-2 pseudo-pair interaction test: 2026-09-08 16:23:23 
+model: z_S ~ is_real * condition + (1|a_id) + (1|b_id)
+files: pseudo_pairs_0.1_invisible.csv, pseudo_pairs_0.1_visible.csv 
+conditions: invisible, visible 
+periods:    P1, P2, P3 
+=====================================================
+
+--- delta=0.1 | period=P1 (n=633, real=57) ---
+
+Type III ANOVA (Satterthwaite):
+Type III Analysis of Variance Table with Satterthwaite's method
+                   Sum Sq Mean Sq NumDF DenDF F value Pr(>F)
+is_real           1.25517 1.25517     1   629  1.2499 0.2640
+condition         1.79253 1.79253     1   629  1.7850 0.1820
+is_real:condition 0.53645 0.53645     1   629  0.5342 0.4651
+
+real - pseudo within each condition:
+condition = invisible:
+ contrast          estimate    SE  df lower.CL upper.CL t.ratio p.value
+ real_minus_pseudo  -0.0539 0.198 543   -0.444    0.336  -0.271  0.7862
+
+condition = visible:
+ contrast          estimate    SE  df lower.CL upper.CL t.ratio p.value
+ real_minus_pseudo  -0.2573 0.195 538   -0.641    0.126  -1.317  0.1884
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+
+interaction contrast (difference of the real-pseudo effect between conditions):
+ is_real_revpairwise condition_revpairwise estimate    SE  df lower.CL upper.CL
+ real - pseudo       visible - invisible     -0.203 0.278 541    -0.75    0.344
+ t.ratio p.value
+  -0.730  0.4654
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+
+--- delta=0.1 | period=P2 (n=660, real=60) ---
+
+Type III ANOVA (Satterthwaite):
+Type III Analysis of Variance Table with Satterthwaite's method
+                   Sum Sq Mean Sq NumDF  DenDF F value Pr(>F)
+is_real           0.59733 0.59733     1 605.95  0.6090 0.4355
+condition         2.30079 2.30079     1 372.56  2.3455 0.1265
+is_real:condition 0.16858 0.16858     1 605.95  0.1719 0.6786
+
+real - pseudo within each condition:
+condition = invisible:
+ contrast          estimate   SE  df lower.CL upper.CL t.ratio p.value
+ real_minus_pseudo   0.0491 0.19 559   -0.324    0.422   0.259  0.7961
+
+condition = visible:
+ contrast          estimate   SE  df lower.CL upper.CL t.ratio p.value
+ real_minus_pseudo   0.1603 0.19 559   -0.212    0.533   0.845  0.3987
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+
+interaction contrast (difference of the real-pseudo effect between conditions):
+ is_real_revpairwise condition_revpairwise estimate    SE  df lower.CL upper.CL
+ real - pseudo       visible - invisible      0.111 0.268 559   -0.416    0.638
+ t.ratio p.value
+   0.414  0.6787
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+
+--- delta=0.1 | period=P3 (n=660, real=60) ---
+
+Type III ANOVA (Satterthwaite):
+Type III Analysis of Variance Table with Satterthwaite's method
+                   Sum Sq Mean Sq NumDF  DenDF F value   Pr(>F)   
+is_real            0.2092  0.2092     1 556.18  0.2148 0.643190   
+condition         10.7840 10.7840     1 242.30 11.0733 0.001012 **
+is_real:condition  6.6280  6.6280     1 556.18  6.8058 0.009330 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+real - pseudo within each condition:
+condition = invisible:
+ contrast          estimate    SE  df lower.CL upper.CL t.ratio p.value
+ real_minus_pseudo   -0.411 0.189 558  -0.7821  -0.0393  -2.172  0.0303
+
+condition = visible:
+ contrast          estimate    SE  df lower.CL upper.CL t.ratio p.value
+ real_minus_pseudo    0.287 0.189 558  -0.0847   0.6582   1.517  0.1300
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+
+interaction contrast (difference of the real-pseudo effect between conditions):
+ is_real_revpairwise condition_revpairwise estimate    SE  df lower.CL upper.CL
+ real - pseudo       visible - invisible      0.697 0.267 558    0.172     1.22
+ t.ratio p.value
+   2.608  0.0094
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+
+=====================================================
+Summary of interaction contrasts (Holm across periods within delta):
+positive estimate = (real-pseudo) larger in the alphabetically LATER condition
+(with conditions invisible/visible: positive = larger dyad-specific effect in VISIBLE)
+=====================================================
+  is_real_revpairwise condition_revpairwise estimate     SE    df lower.CL
+1       real - pseudo   visible - invisible  -0.2034 0.2785 540.8  -0.7505
+2       real - pseudo   visible - invisible   0.1112 0.2683 559.3  -0.4158
+3       real - pseudo   visible - invisible   0.6975 0.2674 557.6   0.1722
+  upper.CL t.ratio  p.value delta period   n n_real p_holm_within_delta
+1   0.3436 -0.7305 0.465410   0.1     P1 633     57             0.93082
+2   0.6382  0.4144 0.678714   0.1     P2 660     60             0.93082
+3   1.2228  2.6080 0.009351   0.1     P3 660     60             0.02805

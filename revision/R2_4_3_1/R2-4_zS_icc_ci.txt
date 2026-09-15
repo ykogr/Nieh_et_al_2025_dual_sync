@@ -1,0 +1,96 @@
+=====================================================
+R2-4 reliability of session-level zS: ICC(A,1) with 95% CIs
+=====================================================
+
+Input files           : 10 (pattern ./R2-4_zS_*_d*_per_video.csv)
+Bootstrap replicates  : 10000 (videos resampled with replacement, percentile CI)
+Seed                  : 20260827
+F-based CI            : McGraw & Wong (1996) ICC(A,1); reference only, not meaningful for negative point estimates
+
+--- inter  delta = 0.1 s ---
+  period               n   ICC(A,1)   boot 95% CI          F 95% CI             Pearson r
+  P1                  10     0.071   [ -0.36,   0.42]     [ -0.63,   0.66]      0.079
+  P2                  10    -0.225   [ -0.56,   0.25]     [ -0.85,   0.48]     -0.240
+  P3                  10    -0.733   [ -1.20,  -0.20]     [ -0.79,  -0.37]     -0.931
+  all periods pooled  30    -0.320   [ -0.54,  -0.01]     [ -0.62,   0.05]     -0.318
+
+--- inter  delta = 0.2 s ---
+  period               n   ICC(A,1)   boot 95% CI          F 95% CI             Pearson r
+  P1                  10    -0.030   [ -0.58,   0.42]     [ -0.73,   0.61]     -0.034
+  P2                  10    -0.417   [ -0.75,   0.11]     [ -0.95,   0.32]     -0.412
+  P3                  10     0.023   [ -0.42,   0.65]     [ -0.63,   0.63]      0.025
+  all periods pooled  30    -0.130   [ -0.37,   0.14]     [ -0.48,   0.25]     -0.127
+
+--- inter  delta = 0.3 s ---
+  period               n   ICC(A,1)   boot 95% CI          F 95% CI             Pearson r
+  P1                  10     0.184   [ -0.56,   0.75]     [ -0.55,   0.72]      0.186
+  P2                  10     0.332   [ -0.27,   0.88]     [ -0.29,   0.77]      0.340
+  P3                  10     0.323   [ -0.25,   0.90]     [ -0.29,   0.77]      0.338
+  all periods pooled  30     0.272   [ -0.05,   0.61]     [ -0.08,   0.57]      0.275
+
+--- inter  delta = 0.5 s ---
+  period               n   ICC(A,1)   boot 95% CI          F 95% CI             Pearson r
+  P1                  10     0.439   [ -0.21,   0.68]     [ -0.25,   0.83]      0.450
+  P2                  10     0.548   [  0.06,   0.77]     [ -0.09,   0.87]      0.537
+  P3                  10     0.364   [ -0.04,   0.74]     [ -0.18,   0.78]      0.421
+  all periods pooled  30     0.396   [  0.10,   0.63]     [  0.06,   0.66]      0.400
+
+--- inter  delta = 1 s ---
+  period               n   ICC(A,1)   boot 95% CI          F 95% CI             Pearson r
+  P1                  10     0.422   [ -0.18,   0.63]     [ -0.25,   0.82]      0.462
+  P2                  10     0.509   [ -0.10,   0.81]     [ -0.16,   0.85]      0.492
+  P3                  10     0.187   [ -0.29,   0.64]     [ -0.36,   0.69]      0.216
+  all periods pooled  30     0.304   [ -0.02,   0.56]     [ -0.06,   0.59]      0.303
+
+--- intra  delta = 0.1 s ---
+  period               n   ICC(A,1)   boot 95% CI          F 95% CI             Pearson r
+  P1                  11    -0.343   [ -0.81,   0.13]     [ -0.74,   0.28]     -0.391
+  P2                  12     0.192   [ -0.63,   0.62]     [ -0.47,   0.68]      0.184
+  P3                  12     0.274   [ -0.71,   0.66]     [ -0.38,   0.72]      0.288
+  all periods pooled  35     0.044   [ -0.41,   0.36]     [ -0.29,   0.37]      0.045
+
+--- intra  delta = 0.2 s ---
+  period               n   ICC(A,1)   boot 95% CI          F 95% CI             Pearson r
+  P1                  11     0.316   [ -0.35,   0.72]     [ -0.32,   0.76]      0.316
+  P2                  12     0.076   [ -0.40,   0.42]     [ -0.53,   0.61]      0.075
+  P3                  12     0.494   [  0.03,   0.89]     [ -0.02,   0.82]      0.545
+  all periods pooled  35     0.247   [ -0.05,   0.50]     [ -0.10,   0.54]      0.242
+
+--- intra  delta = 0.3 s ---
+  period               n   ICC(A,1)   boot 95% CI          F 95% CI             Pearson r
+  P1                  11    -0.311   [ -0.57,   0.08]     [ -0.81,   0.35]     -0.330
+  P2                  12    -0.073   [ -0.52,   0.34]     [ -0.64,   0.51]     -0.070
+  P3                  12     0.499   [  0.02,   0.79]     [ -0.07,   0.82]      0.493
+  all periods pooled  35    -0.000   [ -0.31,   0.30]     [ -0.34,   0.33]     -0.000
+
+--- intra  delta = 0.5 s ---
+  period               n   ICC(A,1)   boot 95% CI          F 95% CI             Pearson r
+  P1                  11    -0.378   [ -0.95,   0.38]     [ -0.90,   0.32]     -0.340
+  P2                  12    -0.093   [ -0.61,   0.42]     [ -0.66,   0.50]     -0.091
+  P3                  12     0.471   [  0.02,   0.72]     [ -0.14,   0.81]      0.534
+  all periods pooled  35    -0.067   [ -0.44,   0.35]     [ -0.40,   0.27]     -0.066
+
+--- intra  delta = 1 s ---
+  period               n   ICC(A,1)   boot 95% CI          F 95% CI             Pearson r
+  P1                  11    -0.510   [ -0.99,   0.39]     [ -0.95,   0.18]     -0.471
+  P2                  12     0.071   [ -0.45,   0.45]     [ -0.46,   0.59]      0.078
+  P3                  12     0.244   [ -0.34,   0.63]     [ -0.27,   0.69]      0.274
+  all periods pooled  35    -0.113   [ -0.48,   0.30]     [ -0.41,   0.21]     -0.120
+
+Range of the per-period bootstrap CIs (P1-P3 only, pooled row excluded):
+  inter d0.1: ICC point estimates -0.73 to 0.07; CI lower bounds -1.20 to -0.36; CI upper bounds -0.20 to 0.42
+  inter d0.2: ICC point estimates -0.42 to 0.02; CI lower bounds -0.75 to -0.42; CI upper bounds 0.11 to 0.65
+  inter d0.3: ICC point estimates 0.18 to 0.33; CI lower bounds -0.56 to -0.25; CI upper bounds 0.75 to 0.90
+  inter d0.5: ICC point estimates 0.36 to 0.55; CI lower bounds -0.21 to 0.06; CI upper bounds 0.68 to 0.77
+  inter d1: ICC point estimates 0.19 to 0.51; CI lower bounds -0.29 to -0.10; CI upper bounds 0.63 to 0.81
+  intra d0.1: ICC point estimates -0.34 to 0.27; CI lower bounds -0.81 to -0.63; CI upper bounds 0.13 to 0.66
+  intra d0.2: ICC point estimates 0.08 to 0.49; CI lower bounds -0.40 to 0.03; CI upper bounds 0.42 to 0.89
+  intra d0.3: ICC point estimates -0.31 to 0.50; CI lower bounds -0.57 to 0.02; CI upper bounds 0.08 to 0.79
+  intra d0.5: ICC point estimates -0.38 to 0.47; CI lower bounds -0.95 to 0.02; CI upper bounds 0.38 to 0.72
+  intra d1: ICC point estimates -0.51 to 0.24; CI lower bounds -0.99 to -0.34; CI upper bounds 0.39 to 0.63
+  both modes, d0.1, P1-P3: CI lower bounds min -1.20, CI upper bounds max 0.66
+
+Note: ICC(A,1) = two-way random effects, absolute agreement, single measures,
+computed on the zS values written by R2-4_zS_reproduction.py (nothing re-simulated).
+With 10-12 videos the CIs are necessarily wide; the pooled row treats the
+video x period cells as independent units and is given for orientation only.

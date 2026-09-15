@@ -1,0 +1,39 @@
+R2-11 Hartigan's dip test on raw latency differences (dt)
+input: ../gridnull_main/dt_trialfix.csv; jitter replicates: 1000; jitter: U(-0.05, +0.05) s; seed: 20260815
+
+--- 0.1_vis (n = 2432) ---
+  raw value counts: -0.1: 814, +0.0: 801, +0.1: 817
+  raw quantized:  dip = 0.167352, p = 0 (3 distinct values)
+  jittered:       dip median = 0.007982 [0.005716, 0.011239],
+                  p   median = 0.4061 [0.0408, 0.9220], prop(p < 0.05) = 0.0390
+
+--- 0.1_invis (n = 2700) ---
+  raw value counts: -0.1: 909, +0.0: 898, +0.1: 893
+  raw quantized:  dip = 0.166296, p = 0 (3 distinct values)
+  jittered:       dip median = 0.007116 [0.005293, 0.009886],
+                  p   median = 0.5226 [0.0801, 0.9414], prop(p < 0.05) = 0.0110
+
+--- 0.2_vis (n = 3851) ---
+  raw value counts: -0.2: 774, -0.1: 814, +0.0: 800, +0.1: 810, +0.2: 653
+  raw quantized:  dip = 0.105167, p = 0 (5 distinct values)
+  jittered:       dip median = 0.005192 [0.003917, 0.007360],
+                  p   median = 0.7687 [0.1879, 0.9900], prop(p < 0.05) = 0.0030
+
+--- 0.2_invis (n = 4382) ---
+  raw value counts: -0.2: 937, -0.1: 909, +0.0: 897, +0.1: 887, +0.2: 752
+  raw quantized:  dip = 0.103720, p = 0 (5 distinct values)
+  jittered:       dip median = 0.004885 [0.003639, 0.006878],
+                  p   median = 0.7646 [0.1918, 0.9904], prop(p < 0.05) = 0.0020
+
+--- 0.3_vis (n = 4514) ---
+  raw value counts: -0.3: 614, -0.2: 774, -0.1: 813, +0.0: 792, +0.1: 758, +0.2: 550, +0.3: 213
+  raw quantized:  dip = 0.087727, p = 0 (7 distinct values)
+  jittered:       dip median = 0.004073 [0.003108, 0.005781],
+                  p   median = 0.9479 [0.4375, 0.9950], prop(p < 0.05) = 0.0000
+
+--- 0.3_invis (n = 5073) ---
+  raw value counts: -0.3: 715, -0.2: 938, -0.1: 909, +0.0: 889, +0.1: 814, +0.2: 584, +0.3: 224
+  raw quantized:  dip = 0.089592, p = 0 (7 distinct values)
+  jittered:       dip median = 0.003909 [0.002903, 0.005510],
+                  p   median = 0.9357 [0.4201, 0.9953], prop(p < 0.05) = 0.0000
+
